@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "webpack": "^3.5.6"
+  },
+  "scripts": {
+    "helloworld": "webpack --config webpack.helloworld.js --watch",
+    "css_loader": "webpack --config webpack.css_loader.js --watch",
+    "pre_css_loader": "webpack --config webpack.pre_css_loader.js --watch",
+    "image": "webpack --config webpack.image.js --watch"
+  }
+}
