@@ -1,0 +1,93 @@
+const path = require('path');
+module.exports = {
+	entry:"./pre_css_loader/index.js",
+	output:{
+		filename:"dist.js",
+		path:path.resolve(__dirname,'pre_css_loader')
+	},
+	module:{
+		rules:[
+			// css-loader postcss-loader
+			{
+				test:/\.css/,
+				use:[
+					{
+						loader:'style-loader',
+					},
+					{
+						loader:"css-loader",
+					},
+				]
+			},
+			// less-loader	
+			{
+				test:/\.less/,
+				use:[
+					{
+						loader:"style-loader"
+					},
+					{
+						loader:"css-loader",
+					},
+					{
+						loader:"less-loader",
+						options:{
+						}
+					}
+				]
+			},
+			// scss-loader
+			{
+				test:/\.scss/,
+				use:[
+					{
+						loader:"style-loader"
+					},
+					{
+						loader:"css-loader",
+					},
+					{
+						loader:"sass-loader",
+						options:{
+						}
+					}					
+				]
+			},
+			// sass-loader
+			{
+				test:/\.sass/,
+				use:[
+					{
+						loader:"style-loader"
+					},
+					{
+						loader:"css-loader",
+					},
+					{
+						loader:"sass-loader",
+						options:{
+						}
+					}					
+				]
+			},
+			// stylu-loader
+			{
+				test:/\.styl/,
+				use:[
+					{
+						loader:"style-loader"
+					},
+					{
+						loader:"css-loader",
+					},
+					{
+						loader:"stylus-loader",
+						options:{
+						}
+					}		
+				]
+			},
+
+		]
+	}
+}
