@@ -60,33 +60,45 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "ebe4c46141971b2f4df7d3756eb6e525.eot";
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_sass__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_sass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__banner_svg__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__banner_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__banner_svg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__iconfont_css__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__iconfont_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__iconfont_css__);
 
 
-
-
-document.querySelector('#img1').src = __WEBPACK_IMPORTED_MODULE_1__banner_svg___default.a;
+const createElement = ()=>{
+	const elementStr =  "<div>"+
+												"<i class='icon icon-zan'></i>"+
+												"<i class='icon icon-diannao'></i>"+
+												"<i class='icon icon-shouji'></i>"+
+											"</div>";
+	const ele = document.createElement('div');
+	ele.innerHTML = elementStr;
+	return ele;
+}
+document.body.appendChild(createElement())
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(2);
+var content = __webpack_require__(3);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -94,14 +106,14 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(8)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./index.sass", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./index.sass");
+		module.hot.accept("!!../node_modules/css-loader/index.js!./iconfont.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!./iconfont.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -111,21 +123,21 @@ if(false) {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+exports = module.exports = __webpack_require__(4)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  padding: 50px; }\n  body #div1 {\n    width: 600px;\n    height: 360px;\n    margin: 20px;\n    background-size: cover;\n    background: url(" + __webpack_require__(4) + "); }\n  body #div2 {\n    width: 600px;\n    height: 360px;\n    margin: 20px;\n    background-size: cover;\n    background: url(" + __webpack_require__(5) + "); }\n  body #div3 {\n    width: 250px;\n    height: 250px;\n    background-size: cover;\n    background: url(" + __webpack_require__(6) + ");\n    margin: 20px; }\n  body #div4 {\n    margin: 20px;\n    background: #ccc; }\n", ""]);
+exports.push([module.i, "\n@font-face {font-family: \"iconfont\";\n  src: url(" + __webpack_require__(0) + "); /* IE9*/\n  src: url(" + __webpack_require__(0) + "#iefix) format('embedded-opentype'), \n  url(" + __webpack_require__(5) + ") format('woff'), \n  url(" + __webpack_require__(6) + ") format('truetype'), \n  url(" + __webpack_require__(7) + "#iconfont) format('svg'); /* iOS 4.1- */\n}\n\n.iconfont {\n  font-family:\"iconfont\" !important;\n  font-size:16px;\n  font-style:normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n.icon-diannao:before { content: \"\\348F\"; }\n\n.icon-qianjin:before { content: \"\\F0075\"; }\n\n.icon-houtui:before { content: \"\\E631\"; }\n\n.icon-qq:before { content: \"\\E606\"; }\n\n.icon-weixin:before { content: \"\\E603\"; }\n\n.icon-icon3:before { content: \"\\E604\"; }\n\n.icon-unie61d:before { content: \"\\E60A\"; }\n\n.icon-eye:before { content: \"\\E622\"; }\n\n.icon-iconfont707:before { content: \"\\E610\"; }\n\n.icon-lianjie:before { content: \"\\F010B\"; }\n\n.icon-weixin1:before { content: \"\\E675\"; }\n\n.icon-fuyiyaofei:before { content: \"\\E62C\"; }\n\n.icon-fenxiang:before { content: \"\\E601\"; }\n\n.icon-facebook:before { content: \"\\E61A\"; }\n\n.icon-xiangyou:before { content: \"\\E649\"; }\n\n.icon-tupian:before { content: \"\\E627\"; }\n\n.icon-xiangzuo:before { content: \"\\E660\"; }\n\n.icon-shouji:before { content: \"\\E60B\"; }\n\n.icon-svg17:before { content: \"\\E838\"; }\n\n.icon-pinglun:before { content: \"\\E612\"; }\n\n.icon-wenjian:before { content: \"\\E6B8\"; }\n\n.icon-xiangpica:before { content: \"\\E6C5\"; }\n\n.icon-mianxingtubiao1xiangpica:before { content: \"\\E6C6\"; }\n\n.icon-chenggong:before { content: \"\\E659\"; }\n\n.icon-zhanghu:before { content: \"\\E613\"; }\n\n.icon-message:before { content: \"\\E60D\"; }\n\n.icon-wodezhanghu:before { content: \"\\E62A\"; }\n\n.icon-Secret:before { content: \"\\E602\"; }\n\n.icon-jiantou:before { content: \"\\E6A4\"; }\n\n.icon-xin:before { content: \"\\E7A4\"; }\n\n.icon-shibai:before { content: \"\\E634\"; }\n\n.icon-shou:before { content: \"\\E607\"; }\n\n.icon-fankui:before { content: \"\\E614\"; }\n\n.icon-xiugai:before { content: \"\\E64D\"; }\n\n.icon-wenhao:before { content: \"\\E6E6\"; }\n\n.icon-zan:before { content: \"\\E65D\"; }\n\n.icon-phonedateicon25:before { content: \"\\E635\"; }\n\n.icon-liwuhuodong-copy:before { content: \"\\E605\"; }\n\n.icon-yanzhengma:before { content: \"\\E6A2\"; }\n\n.icon-weibo:before { content: \"\\E608\"; }\n\n.icon-o1:before { content: \"\\E609\"; }\n\n.icon-alibabaialipay1188640easyiconnet:before { content: \"\\E60F\"; }\n\n.icon-hf:before { content: \"\\E63B\"; }\n\n.icon-guanbi2fill:before { content: \"\\E724\"; }\n\n.icon-yuanxingxuanzhongfill:before { content: \"\\E730\"; }\n\n.icon-zhihu:before { content: \"\\E636\"; }\n\n.icon-iconfontfanhui4:before { content: \"\\E61C\"; }\n\n.icon-cuowu:before { content: \"\\E641\"; }\n\n.icon-zhengque:before { content: \"\\E664\"; }\n\n.icon-wangyexian:before { content: \"\\E764\"; }\n\n.icon-pinterest:before { content: \"\\E63A\"; }\n\n.icon-reset:before { content: \"\\E64F\"; }\n\n.icon-unlike:before { content: \"\\E60C\"; }\n\n.icon-butchulizhong:before { content: \"\\E63C\"; }\n\n.icon-iconfontxiangshang:before { content: \"\\E62D\"; }\n\n.icon-renminbi4:before { content: \"\\E73F\"; }\n\n.icon-tubiao2223:before { content: \"\\E61B\"; }\n\n.icon-jiantou-copy:before { content: \"\\E60E\"; }\n\n.icon-yinlian:before { content: \"\\E719\"; }\n\n.icon-icon31:before { content: \"\\E621\"; }\n\n.icon-yao:before { content: \"\\E629\"; }\n\n.icon-xueyuangoutongguanli01:before { content: \"\\E680\"; }\n\n.icon-zixitong:before { content: \"\\E651\"; }\n\n.icon-jiahao:before { content: \"\\E9E8\"; }\n\n.icon-hide:before { content: \"\\E611\"; }\n\n.icon-jubao:before { content: \"\\E65E\"; }\n\n.icon-cai:before { content: \"\\E672\"; }\n\n.icon-xiangxia:before { content: \"\\E674\"; }\n\n.icon-shimingrenzheng:before { content: \"\\E6FA\"; }\n\n.icon-youjiantou:before { content: \"\\E615\"; }\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -207,25 +219,25 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "877f9c22cba476b93bdc52e14696f8c7.jpg";
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "877f9c22cba476b93bdc52e14696f8c7.png";
+module.exports = __webpack_require__.p + "3b25f81d176dc17518ac94f45da07d31.woff";
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "646f36f8cd1ba7029c050a1c8f45da8a.gif";
+module.exports = __webpack_require__.p + "7b9985b57cbc25312cb2297ac3e4e47a.ttf";
 
 /***/ }),
 /* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "09c0c975f7bf32507a26b7f1d326632a.svg";
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -271,7 +283,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(9);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -584,7 +596,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 
@@ -677,12 +689,6 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "c63e51093403184817e2f3e4421c3b91.svg";
 
 /***/ })
 /******/ ]);

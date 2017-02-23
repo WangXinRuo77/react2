@@ -16,6 +16,7 @@
     "helloworld": "webpack --config webpack.helloworld.js --watch",
     "css_loader": "webpack --config webpack.css_loader.js --watch",
     "pre_css_loader": "webpack --config webpack.pre_css_loader.js --watch",
-    "image": "webpack --config webpack.image.js --watch"
+    "image": "webpack --config webpack.image.js --watch",
+    "font": "webpack --config webpack.font.js --watch"
   }
 }
