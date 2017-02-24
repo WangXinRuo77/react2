@@ -14,11 +14,13 @@ webpack内置了对es6语法的支持
 
 webpack命令配置
 --config     可以更改webpack只能运行webpack.config.js的问题  webpack --config webpack.rename.js 
-
+--watch      监听文件变化，刷新页面后即可看到效果，不需要重新执行webpack命令
 
 注意事项
 
 module中loader的配置，写test的时候不需要加引号
+
+style-loader会把引入的css文件打包到head中的style标签中，这样是不合适的，应该使用某一个插件将他放到新的css文件中
 
 css-loader
 {
@@ -47,4 +49,3 @@ scss
 	use:['css-loader','style-loader','scss-loader']
 }
 
-postcss现在先不管
