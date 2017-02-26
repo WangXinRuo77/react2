@@ -27,11 +27,15 @@ module中loader的配置，写test的时候不需要加引号
 
 
 
-webpack命令配置
+### 命令行
+
 --config     可以更改webpack只能运行webpack.config.js的问题  webpack --config webpack.rename.js 
 --watch      监听文件变化，刷新页面后即可看到效果，不需要重新执行webpack命令
 
 注意事项
+
+### 常用插件
+extract-text-webpack-plugin
 
 ### 如何加载css/less/sass/scss/styl
 
