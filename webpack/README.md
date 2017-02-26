@@ -2,14 +2,15 @@
 
 webpack是一个打包器，通过分析依赖关系网络，构建依赖关系树，根据关系树打包出来一份代码。
 
-四个核心概念
+
+### 四个核心概念
 
 * 入口entry
 * 出口output
 * 加载器loader
 * 插件plugins
 
-列表
+### demo列表
 
 * helloworld 第一个webpackdemo
 * css_loader 使用css-loader和style-loader的demo
@@ -19,7 +20,12 @@ webpack是一个打包器，通过分析依赖关系网络，构建依赖关系�
 * pre_css_loader  使用less-loader,sass-loader,stylus-loader加载less,sass,scss,styl预编译语言
 
 
-webpack内置了对es6语法的支持
+### 杂项
+
+webpack并没有内置了对es6语法的支持
+module中loader的配置，写test的时候不需要加引号
+
+
 
 webpack命令配置
 --config     可以更改webpack只能运行webpack.config.js的问题  webpack --config webpack.rename.js 
@@ -27,11 +33,15 @@ webpack命令配置
 
 注意事项
 
-module中loader的配置，写test的时候不需要加引号
+### 如何加载css/less/sass/scss/styl
+
 
 style-loader会把引入的css文件打包到head中的style标签中，这样是不合适的，应该使用某一个插件将他放到新的css文件中
 
-css-loader
+css
+
+npm install css-loader style-loader --save-dev
+
 {
 	test:/\.css/,
 	use:['css-loader','style-loader']
@@ -46,15 +56,23 @@ npm install less less-loader --save-dev
 	use:['css-loader','style-loader','less-loader']
 }
 
-sass(sass是不要{}和;的scss)
+sass/scss
+
+npm intall sass-loader node-sass --save-dev 
+
 {
 	test:/\.sass/,
 	use:['css-loader','style-loader','sass-loader']
-}
-
-scss
+},
 {
 	test:/\.scss/,
 	use:['css-loader','style-loader','scss-loader']
 }
 
+stylus
+
+npm install stylus-loader --save-dev
+{
+	test:/\.styl$/,
+	use:['stylus-loader','css-loader','style-loader']
+}
