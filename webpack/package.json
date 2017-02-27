@@ -17,10 +17,10 @@
   },
   "scripts": {
     "helloworld": "webpack --config webpack.helloworld.js --watch",
-    "css_loader": "webpack --config webpack.css_loader.js --watch",
+    "loader_css": "webpack --config webpack.loader_css.js --watch",
+    "loader_font": "webpack --config webpack.loader_font.js --watch",
     "pre_css_loader": "webpack --config webpack.pre_css_loader.js --watch",
     "image": "webpack --config webpack.image.js --watch",
-    "loader_font": "webpack --config webpack.loader_font.js --watch",
     "js_loader": "webpack --config webpack.js_loader.js --watch",
     "plugin_css": "webpack --config webpack.plugin.css.js --watch"
   }
