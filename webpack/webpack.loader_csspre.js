@@ -1,9 +1,9 @@
 const path = require('path');
 module.exports = {
-	entry:"./pre_css_loader/index.js",
+	entry:"./loader_csspre/index.js",
 	output:{
 		filename:"dist.js",
-		path:path.resolve(__dirname,'pre_css_loader')
+		path:path.resolve(__dirname,'loader_csspre')
 	},
 	module:{
 		rules:[

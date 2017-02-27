@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-	entry:"./image_loader/index.js",
+	entry:"./loader_image/index.js",
 	output:{
-		path:path.resolve(__dirname,'image_loader'),
+		path:path.resolve(__dirname,'loader_image'),
 		filename:"dist.js"
 	},
 	module:

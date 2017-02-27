@@ -20,10 +20,10 @@
     "loader_css": "webpack --config webpack.loader_css.js --watch",
     "loader_font": "webpack --config webpack.loader_font.js --watch",
     "loader_js": "webpack --config webpack.loader_js.js --watch",
+    "loader_image": "webpack --config webpack.loader_image.js --watch",
 
     
-    "pre_css_loader": "webpack --config webpack.pre_css_loader.js --watch",
-    "image": "webpack --config webpack.image.js --watch",
+    "loader_csspre": "webpack --config webpack.loader_csspre.js --watch",
     "plugin_css": "webpack --config webpack.plugin.css.js --watch"
   }
 }
