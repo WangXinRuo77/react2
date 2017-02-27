@@ -35,7 +35,23 @@ module中loader的配置，写test的时候不需要加引号
 注意事项
 
 ### 常用插件
+
+
 extract-text-webpack-plugin
+
+将多个css/less/sass/stylus文件打包成一个
+
+[官方地址](https://github.com/webpack-contrib/extract-text-webpack-plugin)
+
+
+
+
+
+
+
+
+
+
 
 ### 如何加载css/less/sass/scss/styl
 
