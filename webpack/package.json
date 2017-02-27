@@ -22,6 +22,6 @@
     "image": "webpack --config webpack.image.js --watch",
     "font": "webpack --config webpack.font.js --watch",
     "js_loader": "webpack --config webpack.js_loader.js --watch",
-    "static_loader": "webpack --config webpack.static.js --watch"
+    "plugin_css": "webpack --config webpack.plugin.css.js --watch"
   }
 }
