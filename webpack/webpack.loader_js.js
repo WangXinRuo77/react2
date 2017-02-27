@@ -1,9 +1,9 @@
 const path = require('path');
 module.exports = {
-	entry:"./js_loader/index.js",
+	entry:"./loader_js/index.js",
 	output:{
 		filename:"dist.js",
-		path:path.resolve(__dirname,'js_loader')
+		path:path.resolve(__dirname,'loader_js')
 	},
 	module:{
     loaders: [
