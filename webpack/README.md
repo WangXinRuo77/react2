@@ -12,18 +12,24 @@ webpack是一个打包器，通过分析依赖关系网络，构建依赖关系�
 
 ### demo列表
 
-* helloworld 第一个webpackdemo
-* css_loader 使用css-loader和style-loader的demo
-* font_loader 使用file-loader加载字体
-* image_loader 使用file-loader加载图片
-* js_loader 使用babel-loader加载js
-* pre_css_loader  使用less-loader,sass-loader,stylus-loader加载less,sass,scss,styl预编译语言
-
+```
+	—|	config
+			—| config.md
+	—|  loader
+			—| css
+			—| js
+			—| csspre
+			—| font
+			—| image
+	—|  plugin
+```
 
 ### 杂项
 
 webpack并没有内置了对es6语法的支持
 module中loader的配置，写test的时候不需要加引号
+
+style-loader会把引入的css文件打包到head中的style标签中，这样是不合适的，应该使用某一个插件将他放到新的css文件中
 
 
 
@@ -53,10 +59,8 @@ extract-text-webpack-plugin
 
 
 
-### 如何加载css/less/sass/scss/styl
+### 如何加载css预编译语言  less/sass/scss/styl
 
-
-style-loader会把引入的css文件打包到head中的style标签中，这样是不合适的，应该使用某一个插件将他放到新的css文件中
 
 css
 
