@@ -16,7 +16,7 @@
     "webpack": "^3.5.6"
   },
   "scripts": { 
-    "test": "webpack --config test/test.entry.without.js",
+    "": "webpack --config test/test.entry.without.js",
     "loader_css": "webpack --config webpack.loader.css.js --watch",
     "loader_font": "webpack --config webpack.loader.font.js --watch",
     "loader_js": "webpack --config webpack.loader.js.js --watch",
