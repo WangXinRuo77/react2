@@ -3,9 +3,6 @@ const path = require('path');
 
 module.exports = {
   entry: "./app/entry", // string | object | array
-  // 这里应用程序开始执行
-  // webpack 开始打包
-
   output: {
     // webpack 如何输出结果的相关选项
 
@@ -25,7 +22,6 @@ module.exports = {
     libraryTarget: "umd", // 通用模块定义
     // 导出库(exported library)的类型
 
-    /* 高级输出配置（点击显示） */
   },
 
   module: {
@@ -42,26 +38,13 @@ module.exports = {
         exclude: [
           path.resolve(__dirname, "app/demo-files")
         ],
-        // 这里是匹配条件，每个选项都接收一个正则表达式或字符串
-        // test 和 include 具有相同的作用，都是必须匹配选项
-        // exclude 是必不匹配选项（优先于 test 和 include）
-        // 最佳实践：
-        // - 只在 test 和 文件名匹配 中使用正则表达式
-        // - 在 include 和 exclude 中使用绝对路径数组
-        // - 尽量避免 exclude，更倾向于使用 include
-
-        issuer: { test, include, exclude },
-        // issuer 条件（导入源）
+ 
+        issuer: { test, include, exclude }, 
 
         enforce: "pre",
-        enforce: "post",
-        // 标识应用这些规则，即使规则覆盖（高级选项）
+        enforce: "post", 
 
-        loader: "babel-loader",
-        // 应该应用的 loader，它相对上下文解析
-        // 为了更清晰，`-loader` 后缀在 webpack 2 中不再是可选的
-        // 查看 webpack 1 升级指南。
-
+        loader: "babel-loader", 
         options: {
           presets: ["es2015"]
         },
@@ -72,8 +55,7 @@ module.exports = {
         test: /\.html$/,
         test: "\.html$"
 
-        use: [
-          // 应用多个 loader 和选项
+        use: [ 
           "htmllint-loader",
           {
             loader: "html-loader",
