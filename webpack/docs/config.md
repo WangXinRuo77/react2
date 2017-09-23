@@ -130,5 +130,22 @@ module.exports = {
 }
 ```
 
-### entry
+## entry
+
+entry 是webpack打包你的应用程序的入口，必选项，参数类型可以为string,object,array。支持单入口与多入口。
+
+### 单入口
+
+单入口的配置异常的简单，只需要将入口js文件的路径赋值给entry属性即可
+
+```
+const path = require('path');
+module.exports= {
+  entry:path.resolve(__dirname,'path/to/entry.js')
+}
+```
+
+### 多入口
+
+多入口的webpack配置有两种方式，数组方式与对象方式。数组方式支持支持未知的入口文件数量；而对象方式则是支持已知的
 

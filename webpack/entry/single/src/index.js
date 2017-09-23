@@ -2,9 +2,7 @@ import create from './create';
 import addEvent from './event';
 import './index.css';
 
-
 const myDiv = create('div');
-console.log(myDiv)
 const clickEvent = (ev)=>{
     const element = ev.target || ev.srcElement;
     element.style.background='blue';

@@ -18,6 +18,7 @@
   "scripts": { 
     "entry_no": "webpack --config config/entry.no.js",
     "entry_single": "webpack --config config/entry.single.js --watch",
+    "entry_multiple": "webpack --config config/entry.multiple.js --colors --watch",
     "loader_css": "webpack --config webpack.loader.css.js --watch",
     "loader_font": "webpack --config webpack.loader.font.js --watch",
     "loader_js": "webpack --config webpack.loader.js.js --watch",
