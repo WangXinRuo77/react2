@@ -5,6 +5,7 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "glob": "^7.1.2",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
@@ -15,7 +16,7 @@
     "stylus-loader": "^3.0.1",
     "webpack": "^3.5.6"
   },
-  "scripts": { 
+  "scripts": {
     "entry_no": "webpack --config config/entry.no.js",
     "entry_single": "webpack --config config/entry.single.js --watch",
     "entry_multiple": "webpack --config config/entry.multiple.js --colors --watch",
@@ -23,8 +24,6 @@
     "loader_font": "webpack --config webpack.loader.font.js --watch",
     "loader_js": "webpack --config webpack.loader.js.js --watch",
     "loader_image": "webpack --config webpack.loader.image.js --watch",
-
-    
     "loader_csspre": "webpack --config webpack.loader_csspre.js --watch",
     "plugin_css": "webpack --config webpack.plugin.css.js --watch"
   }

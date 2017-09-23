@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -86,79 +86,7 @@ function addEvent(element,type,handler){
 }
 
 /***/ }),
-/* 2 */,
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_element__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_event__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_b_css__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_b_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__css_b_css__);
-
-
-
-
-const divB = Object(__WEBPACK_IMPORTED_MODULE_0__utils_element__["a" /* default */])('div');
-divB.className = 'b'
-
-
-const cbB = (ev)=>{
-    const element = ev.target||ev.srcElement;
-    element.style.background = 'green';
-    element.innerHTML = 'You have clicked B element';
-    return element;
-}
-Object(__WEBPACK_IMPORTED_MODULE_1__utils_event__["a" /* default */])(divB,'click',cbB)
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(5);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../node_modules/css-loader/index.js!./b.css", function() {
-			var newContent = require("!!../../../../node_modules/css-loader/index.js!./b.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".b{\r\n    width:200px;\r\n    height:200px;\r\n    background: orangered;\r\n    font-size:20px;\r\n    color: white;\r\n    text-align: center;\r\n    float: left;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 6 */
+/* 2 */
 /***/ (function(module, exports) {
 
 /*
@@ -240,7 +168,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -286,7 +214,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(4);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -599,7 +527,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 4 */
 /***/ (function(module, exports) {
 
 
@@ -691,6 +619,80 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_element__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_event__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_b_css__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_b_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__css_b_css__);
+
+
+
+
+const divB = Object(__WEBPACK_IMPORTED_MODULE_0__utils_element__["a" /* default */])('div');
+divB.className = 'b'
+
+
+const cbB = (ev)=>{
+    const element = ev.target||ev.srcElement;
+    element.style.background = 'green';
+    element.innerHTML = 'You have clicked B element';
+    return element;
+}
+Object(__WEBPACK_IMPORTED_MODULE_1__utils_event__["a" /* default */])(divB,'click',cbB)
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(10);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(3)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!./b.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!./b.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".b{\r\n    width:200px;\r\n    height:200px;\r\n    background: orangered;\r\n    font-size:20px;\r\n    color: white;\r\n    text-align: center;\r\n    float: left;\r\n}", ""]);
+
+// exports
 
 
 /***/ })
