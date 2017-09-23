@@ -1,6 +1,5 @@
 const path = require('path');
 const glob = require('glob');
-const entryFiles = glob('../entry/multiple/src/js/*.js');
 const getEntry = (type)=>{
     /*
     * @param type 1 对象格式  2 数组格式
@@ -16,12 +15,20 @@ const getEntry = (type)=>{
         break;
         case 2:{
             return [getPath('/multiple/src/js/a.js'),getPath('/multiple/src/js/b.js')]
+        };
+        break;
+        case 3:{
+            let entryFiles = [];
+            glob('../entry/multiple/src/js/*.js',function(er,files){
+                console.log(files);
+            })
+            return getPath('/multiple/src/js/a.js')
         }
 
     }
 }
 module.exports = {
-    entry:getEntry(1),
+    entry:getEntry(3),
     output:{
         path:path.resolve(__dirname,'../entry/multiple/dist'),
         filename:"[name].js",
