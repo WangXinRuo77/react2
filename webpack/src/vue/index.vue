@@ -7,7 +7,19 @@
 <script>
     export default {
         data(){
-            message:"hello webpack vue"
+            return{
+                message:"hello webpack vue"
+            }
         }
     }
 </script>
+<style>
+    input
+    {
+        border:1px solid #ddd;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        padding:5px;
+    }
+</style>

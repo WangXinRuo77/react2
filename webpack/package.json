@@ -35,7 +35,7 @@
     "loader_image": "webpack --config ./config/loader.image.js --watch",
     "loader_js": "webpack --config ./config/loader.js.js --watch",
     "loader_jsx": "webpack --config ./config/loader.jsx.js --watch",
-    "loader_vue": "webpack --config ./config/loader.vue.js",
+    "loader_vue": "webpack --config ./config/loader.vue.js --watch",
 
 
     "plugin_css": "webpack --config ./config/plugin.css.js --watch"
