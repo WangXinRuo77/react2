@@ -27,6 +27,7 @@
     "loader_font": "webpack --config ./config/loader.font.js --watch",
     "loader_image": "webpack --config ./config/loader.image.js --watch",
     "loader_js": "webpack --config ./config/loader.js.js --watch",
+    "loader_jsx": "webpack --config ./config/loader.jsx.js --watch",
     "plugin_css": "webpack --config ./config/plugin.css.js --watch"
   }
 }
