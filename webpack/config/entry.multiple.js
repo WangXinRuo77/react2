@@ -17,14 +17,6 @@ const getEntry = (type)=>{
             return [getPath('/multiple/src/js/a.js'),getPath('/multiple/src/js/b.js')]
         };
         break;
-        case 3:{
-            let entryFiles = [];
-            glob('../entry/multiple/src/js/*.js',function(er,files){
-                console.log(files);
-            })
-            return getPath('/multiple/src/js/a.js')
-        }
-
     }
 }
 module.exports = {
