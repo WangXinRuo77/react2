@@ -1,9 +1,9 @@
 const path = require('path');
 module.exports = {
-	entry:"./loader_js/index.js",
+	entry:path.resolve(__dirname,'../loaders/js/index.js'),
 	output:{
 		filename:"dist.js",
-		path:path.resolve(__dirname,'loader_js')
+		path:path.resolve(__dirname,'../loaders/js/dist')
 	},
 	module:{
     loaders: [
@@ -14,6 +14,10 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
+        },
+        {
+            test:/\.css$/,
+            loader:"style-loader!css-loader"
         }
     ]
 	}
