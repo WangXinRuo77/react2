@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-	entry:"./loader_font/index.js",
+	entry:path.resolve(__dirname,"../loaders/font/index.js"),
 	output:{
 		filename:"dist.js",
-		path:path.resolve(__dirname,'loader_font/dist')
+		path:path.resolve(__dirname,'../loaders/font/dist')
 	},
 	module:{
 		rules:[
