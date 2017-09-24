@@ -1,27 +1,18 @@
 const path = require('path');
 
 module.exports = {
-	entry:"./loader_image/index.js",
+	entry:path.resolve(__dirname,"../loaders/image/index.js"),
 	output:{
-		path:path.resolve(__dirname,'loader_image'),
-		filename:"dist.js"
+		path:path.resolve(__dirname,'../loaders/image/dist'),
+		filename:"dist.js",
+		publicPath:"dist/"
 	},
 	module:
 	{
 		rules:[
 			{
-				test:/\.sass/,
-				use:[
-					{
-						loader:'style-loader'
-					},
-					{
-						loader:'css-loader'
-					},
-					{
-						loader:'sass-loader'
-					}
-				]
+				test:/\.css$/,
+				loaders:"style-loader!css-loader"
 			},
 			{
 				test:/\.(jpg|png|svg|gif)/,
