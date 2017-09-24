@@ -1,22 +1,21 @@
-
+import React from 'react';
 const ShowData = React.createClass({
     getInitialState(){
         return {
-            location:"beijing",
+            message:"hello webpack react",
         }
     },
     handleChange(ev){
-        const inputElement = ev.target||ev.srcElement;
-        this.state.location = inputElement.value;
+        this.setState({message:ev.target.value})
     },
     render(){
+        let myMessage = this.state.message;
         return(
             <div>
-                <p>{this.state.location}</p>
-                <input type="text" onchange={this.handleChange}/>
+                <p>{myMessage}</p>
+                <input type="text" value={myMessage} onChange={this.handleChange}/>
             </div>
         )
     }
 })
-
-React.render(<ShowData/>,document.getElementById('div1'))
+export default ShowData;
