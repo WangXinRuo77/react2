@@ -26,15 +26,18 @@
     "webpack": "^3.5.6"
   },
   "scripts": {
-    "entry_no": "webpack --config config/entry.no.js",
     "entry_single": "webpack --config config/entry.single.js --watch",
     "entry_multiple": "webpack --config config/entry.multiple.js --colors --watch",
+
     "loader_css": "webpack --config ./config/loader.css.js --watch",
     "loader_csspre": "webpack --config ./config/loader.csspre.js --watch",
     "loader_font": "webpack --config ./config/loader.font.js --watch",
     "loader_image": "webpack --config ./config/loader.image.js --watch",
     "loader_js": "webpack --config ./config/loader.js.js --watch",
     "loader_jsx": "webpack --config ./config/loader.jsx.js --watch",
+    "loader_vue": "webpack --config ./config/loader.vue.js",
+
+
     "plugin_css": "webpack --config ./config/plugin.css.js --watch"
   },
   "dependencies": {
