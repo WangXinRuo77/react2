@@ -6,6 +6,7 @@ module.exports = {
 		filename:"[name].bundle.js",
 		path:path.resolve(__dirname,'../plugins/html-webpack-plugin/')
 	},
+	devtool:"inline-source-map",
 	module:{
 		rules:[
 			{

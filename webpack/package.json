@@ -25,7 +25,8 @@
     "vue-loader": "^13.0.5",
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.5.6"
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
   },
   "scripts": {
     "entry_single": "webpack --config config/entry.single.js --watch",
@@ -38,7 +39,10 @@
     "loader_jsx": "webpack --config ./config/loader.jsx.js --watch",
     "loader_vue": "webpack --config ./config/loader.vue.js --watch",
     "plugin_css": "webpack --config ./config/plugin.css.js --watch",
-    "html_webpack_plugin": "webpack --config ./config/plugin.html_webpack_plugin.js"
+
+
+    "html_webpack_plugin": "webpack --config ./config/plugin.html_webpack_plugin.js --watch",
+    "webpack_dev_server" : "webpack --config ./config/plugin.webpack_dev_server.js "
   },
   "dependencies": {
     "react": "^15.6.1",
