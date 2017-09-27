@@ -42,7 +42,7 @@
 
 
     "html_webpack_plugin": "webpack --config ./config/plugin.html_webpack_plugin.js --watch",
-    "webpack_dev_server" : "webpack --config ./config/plugin.webpack_dev_server.js "
+    "webpack_dev_server" : "webpack-dev-server --config ./config/plugin.webpack_dev_server.js "
   },
   "dependencies": {
     "react": "^15.6.1",
