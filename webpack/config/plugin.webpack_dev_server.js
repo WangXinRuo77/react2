@@ -10,7 +10,7 @@ module.exports = {
 	devServer:{
 		contentBase:path.resolve(__dirname,'../plugins/webpack-dev-server/src'),
 		compress:false,
-		port:9000,
+		port:9001,
 		noInfo:true, 
 		inline:true,
 	},
@@ -26,7 +26,10 @@ module.exports = {
 		path:path.resolve(__dirname,'../plugins/webpack-dev-server/src')
 	},
 	resolve:{
-		extensions:['.js','.vue','.json']
+		extensions:['.js','.vue','.json','.css'],
+		alias:{
+			'vue':'vue/dist/vue.js'
+		}
 	},
 	module:{
 		rules:[
