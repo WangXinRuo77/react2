@@ -11,5 +11,5 @@ document.body.appendChild(oDiv)
 
 
 oDiv.addEventListener('click', (ev)=>{
-	alert(ev.target.tagName)
-}, false)
+	alert(ev.target.tagName+'a')
+}, true)
