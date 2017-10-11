@@ -1,27 +1,24 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-	entry:path.resolve(__dirname,'../plugins/html-webpack-plugin/src/index.js'),
+	entry:path.resolve(__dirname,'src/index.js'),
 	output:{
-		filename:"[name].bundle.js",
-		path:path.resolve(__dirname,'../plugins/html-webpack-plugin/')
+		filename:"[id].[chunkHash].js",
+		path:path.resolve(__dirname,'dist')
 	},
 	devtool:"inline-source-map",
 	module:{
-		rules:[
+		loaders:[
 			{
-				test:/\.js$/g,
-				loader:"babel-loader"
-			},
-			{
-				test:/\.css$/g,
-				loader:"style-loader!css-loader"
+				test:/\.js%/,
+				loader:"babel-loader",
 			}
 		]
 	},
 	plugins:[
 		new HtmlWebpackPlugin({
-			title:"output html webpack plugin"
+			title:"output html webpack plugin",
+			template:path.resolve(__dirname,'src/index.html')
 		})
 	]
 }

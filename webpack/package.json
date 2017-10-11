@@ -42,7 +42,7 @@
     "loader_jsx": "webpack --config ./config/loader.jsx.js --watch",
     "loader_vue": "webpack --config ./config/loader.vue.js --watch",
     "plugin_css": "webpack --config ./config/plugin.css.js --watch",
-    "html_webpack_plugin": "webpack --config ./config/plugin.html_webpack_plugin.js --watch",
+    "html_webpack_plugin": "webpack --config ./html-webpack-plugin/webpack.config.js --watch",
     "webpack_dev_server": "webpack-dev-server --config ./config/plugin.webpack_dev_server.js ",
     "webpack_dev_middleware": "node ./config/dev-server.js",
     "webpack_hot_middleware": " node ./config/plugin.webpack_hot_middleware.js"
