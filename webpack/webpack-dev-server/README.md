@@ -1,11 +1,24 @@
 # webpack-dev-server
 
+
 webpack-dev-server是一个微型的express服务器，是用来搭建前端开发环境的，主要是提供了起服务，热刷新等功能。
+
+### 目的
+
+我们期望使用webpack-dev-server搭建起来一个react的开发环境，实现热刷新功能。
+
+
 
 ### 安装
 
 ```
- npm install webpack webpack-dev-server --save-dev
+	// 安装webpack webpack-dev-server构建工具
+  npm install webpack webpack-dev-server --save-dev
+  // 安装react核心库
+  npm install react react-dom --save
+  // 安装babel编译
+  npm install babel babel-preset-es2015 babel-preset-react
+
 ```
 
 ### 使用
