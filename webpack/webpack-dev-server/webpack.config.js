@@ -14,6 +14,12 @@ module.exports = {
 			}
 		]
 	},
+	devServer: {
+		contentBase:path.join(__dirname),
+		compress:true,
+		port:8088,
+		noInfo:true
+	},
 	output: {
 		path:__dirname,
 		filename:"./src/bundle.js"
