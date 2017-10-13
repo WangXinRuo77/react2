@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyHeader from './header';
-import MyFooter from './footer';
+import ComponentHeader from './header';
+import ComponentFooter from './footer';
+import PageIndex from './body';
 ReactDOM.render(
 	<div>
-		<MyHeader />
-		hello react and webp1ack2-dev-server!
-		<MyFooter />
+		<ComponentHeader />
+		<PageIndex />
+		<ComponentFooter />
 	</div>,
 	document.getElementById('div1')
 )
