@@ -1,9 +1,12 @@
 const path = require('path');
 
 module.exports = {
-	context:path.resolve(__dirname),
-	entry:'src/index.js',
-	module: {
+	entry:path.resolve(__dirname,'src/index.js'),
+	output:{
+		path:"/",
+		filename:"bundle.js",
+	},
+	module:{
 		loaders:[
 			{
 				test:/\.js/,
@@ -14,9 +17,5 @@ module.exports = {
 				}
 			}
 		]
-	},
-	output: {
-		filename:"bundle.js",
-		path:__dirname
 	}
 }

@@ -1,7 +1,7 @@
-const react = require('react');
-const reactDOM  = require('react-dom');
+const React = require('react');
+const ReactDOM  = require('react-dom');
 
-reactDOM.render(
-	<h1>hello react and webpack-dev-server</h1>,
+ReactDOM.render(
+	<h1>hello react and webp1ack2-dev-server</h1>,
 	document.getElementById('div1')
 )
