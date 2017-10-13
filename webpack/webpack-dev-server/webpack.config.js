@@ -6,6 +6,7 @@ module.exports = {
 		path:path.resolve(__dirname),
 		filename:"bundle.js",
 	},
+	devtool:"cheap-eval-source-map",
 	devServer:{
 		//Provides the ability to execute custom middleware after all other middleware internally within the server.
 		after(app){
@@ -22,7 +23,7 @@ module.exports = {
 
 		// When using inline mode, the console in your DevTools will show you messages e.g. before reloading, before an error or when Hot Module Replacement is enabled. This may be too verbose
 		// none/error/warning/info(default)
-		clientLogLevel:"none",
+		// clientLogLevel:"none",
 
 		// Enable gzip compression for everything served
 		compress:true,
@@ -41,7 +42,7 @@ module.exports = {
 		},
 
 		// When using the HTML5 History API, the index.html page will likely have to be served in place of any 404 responses. Enable this by passing:
-		historyApiFallback:true,
+		// historyApiFallback:true,
 
 		// Specify a host to use. By default this is localhost. If you want your server to be accessible externally, specify it like this:
 		// host:"1,2,3,4",
@@ -124,7 +125,7 @@ module.exports = {
 
 		// This option lets you precisely control what bundle information gets displayed. This can be a nice middle ground if you want some bundle information, but not all of it.To show only errors in your bundle:
 		// This option has no effect when used with quiet or noInfo.
-		stats:"errors-only"
+		// stats:"errors-only"
 	},
 	module:{
 		loaders:[

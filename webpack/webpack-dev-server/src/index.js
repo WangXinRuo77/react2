@@ -1,7 +1,12 @@
-const React = require('react');
-const ReactDOM  = require('react-dom');
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyHeader from './header';
+import MyFooter from './footer';
 ReactDOM.render(
-	<h1>hello react and webp1ack2-dev-server</h1>,
+	<div>
+		<MyHeader />
+		hello react and webp1ack2-dev-server!
+		<MyFooter />
+	</div>,
 	document.getElementById('div1')
 )
