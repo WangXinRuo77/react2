@@ -19,6 +19,7 @@
     "webpack": "^3.7.1"
   },
   "dependencies": {
-    "antd": "^2.13.6"
+    "antd": "^2.13.6",
+    "less": "^3.0.0-alpha.3"
   }
 }

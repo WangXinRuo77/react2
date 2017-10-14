@@ -9,24 +9,24 @@ module.exports = {
 	module:{
 		loaders:[
 			{
-				test:/\.css/,
-				loader:"css-loader!style-loader"
+				test:/\.css$/,
+				loaders:"style-loader!css-loader",
 			},
 			{
 				test:/\.less/,
-				loader:"css-loader!style-loader!less-loader"
+				loader:"style-loader!css-loader!less-loader"
 			},
 			{
 				test:/\.sass/,
-				loader:"css-loader!sass-loader!style-loader"
+				loader:"style-loader!css-loader!sass-loader"
 			},
 			{
 				test:/\.scss/,
-				loader:"css-loader!style-loader!sass-loader"
+				loader:"style-loader!sass-loader!css-loader"
 			},
 			{
 				test:/\.styl/,
-				loader:"css-loader!style-loader!styl-loader"
+				loader:"style-loader!css-loader!styl-loader"
 			}
 		]
 	},
