@@ -35,8 +35,20 @@ style-loader会把引入的css文件打包到head中的style标签中，这样�
 
 ### 命令行
 
---config     可以更改webpack只能运行webpack.config.js的问题  webpack --config webpack.rename.js 
---watch      监听文件变化，刷新页面后即可看到效果，不需要重新执行webpack命令
+--config     
+
+可以更改webpack只能运行webpack.config.js的问题  webpack 
+```
+--config webpack.rename.js 
+```
+
+--watch      
+
+监听文件变化，刷新页面后即可看到效果，不需要重新执行webpack命令
+
+```
+webpack --watch
+```
 
 注意事项
 
@@ -56,47 +68,3 @@ extract-text-webpack-plugin
 
 
 
-
-
-
-### 如何加载css预编译语言  less/sass/scss/styl
-
-
-css
-
-npm install css-loader style-loader --save-dev
-
-{
-	test:/\.css/,
-	use:['css-loader','style-loader']
-}
-
-less
-
-npm install less less-loader --save-dev
-
-{
-	test:/\.less/,
-	use:['css-loader','style-loader','less-loader']
-}
-
-sass/scss
-
-npm intall sass-loader node-sass --save-dev 
-
-{
-	test:/\.sass/,
-	use:['css-loader','style-loader','sass-loader']
-},
-{
-	test:/\.scss/,
-	use:['css-loader','style-loader','scss-loader']
-}
-
-stylus
-
-npm install stylus-loader --save-dev
-{
-	test:/\.styl$/,
-	use:['stylus-loader','css-loader','style-loader']
-}
