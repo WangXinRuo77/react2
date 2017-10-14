@@ -523,14 +523,14 @@ function updateLink (link, options, obj) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__theme_body_less__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__theme_body_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__theme_body_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__theme_footer_sass__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__theme_footer_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__theme_footer_sass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_header_css__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__theme_header_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_modal_styl__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_modal_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__theme_modal_styl__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_body_less__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ui_body_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ui_body_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_footer_sass__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ui_footer_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ui_footer_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ui_header_css__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ui_header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ui_header_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_modal_styl__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ui_modal_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__ui_modal_styl__);
 
 
 
@@ -553,51 +553,8 @@ oModal.querySelector('.modal-content').addEventListener('click', function(ev){
 }, false)
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(4);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less", function() {
-			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "html * {\n  margin: 0;\n  padding: 0;\n}\nhtml input {\n  border: none;\n  outline: none;\n  background: none;\n  cursor: pointer;\n}\nhtml .page-index {\n  min-height: 200px;\n  text-align: center;\n  margin: 100px 0;\n}\nhtml .page-index p {\n  margin-bottom: 20px;\n}\nhtml .btn {\n  display: inline-block;\n  padding: 6px 12px;\n  margin-bottom: 0;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 1.42857143;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -ms-touch-action: manipulation;\n  touch-action: manipulation;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\nhtml .btn-default {\n  color: #333;\n  background-color: #fff;\n  border-color: #ccc;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 3 */,
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports) {
 
@@ -693,13 +650,64 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(7);
+var content = __webpack_require__(13);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less", function() {
+			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "html * {\n  margin: 0;\n  padding: 0;\n}\nhtml input {\n  border: none;\n  outline: none;\n  background: none;\n  cursor: pointer;\n}\nhtml .page-index {\n  min-height: 200px;\n  text-align: center;\n  margin: 100px 0;\n}\nhtml .page-index p {\n  margin-bottom: 20px;\n}\nhtml .btn {\n  display: inline-block;\n  padding: 6px 12px;\n  margin-bottom: 0;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 1.42857143;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -ms-touch-action: manipulation;\n  touch-action: manipulation;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\nhtml .btn-default {\n  color: #333;\n  background-color: #fff;\n  border-color: #ccc;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -724,7 +732,7 @@ if(false) {
 }
 
 /***/ }),
-/* 7 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -738,13 +746,13 @@ exports.push([module.i, ".component-footer {\n  width: 100%;\n  height: 80px;\n 
 
 
 /***/ }),
-/* 8 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(9);
+var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -769,7 +777,7 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -783,13 +791,13 @@ exports.push([module.i, ".component-header\r\n{\r\n\twidth:100%;\r\n\theight: 80
 
 
 /***/ }),
-/* 10 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -814,7 +822,7 @@ if(false) {
 }
 
 /***/ }),
-/* 11 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);

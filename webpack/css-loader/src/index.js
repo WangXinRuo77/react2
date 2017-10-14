@@ -1,7 +1,7 @@
-import './theme/body.less';
-import './theme/footer.sass';
-import './theme/header.css';
-import './theme/modal.styl';
+import './ui/body.less';
+import './ui/footer.sass';
+import './ui/header.css';
+import './ui/modal.styl';
 
 
 const oBtn = document.querySelector('#btn1');
