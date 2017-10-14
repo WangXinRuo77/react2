@@ -9,7 +9,7 @@ export default class PageIndex extends React.Component {
 		}
 	} 
 	addSecond(){
-		var nextSecond = this.state.second+1;
+		var nextSecond = this.state.second+2;
 		this.setState({
 			second:nextSecond
 		})

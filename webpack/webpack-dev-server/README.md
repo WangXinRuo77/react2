@@ -5,11 +5,11 @@ webpack-dev-server是一个微型的express服务器，是用来搭建前端开�
 
 ### 目的
 
-我们期望使用webpack-dev-server搭建起来一个react的开发环境，实现热刷新功能。
+我们期望使用webpack-dev-server搭建起来一个react的开发环境，类似于vue-cli的简化版本，实现react作为view层的功能，然后给一个热刷新以及jsx语法的编译，用来学习webpack-dev-server应该差不多了。
 
 
 
-### 安装
+### 依赖
 
 ```
 	// 安装webpack webpack-dev-server构建工具
@@ -17,15 +17,20 @@ webpack-dev-server是一个微型的express服务器，是用来搭建前端开�
   // 安装react核心库
   npm install react react-dom --save
   // 安装babel编译
-  npm install babel babel-preset-es2015 babel-preset-react
+  npm install babel babel-core babel-preset-es2015 babel-preset-react
 
 ```
-
-### 使用
 
 
 ### 配置
 
+webpack-dev-server的配置就不能用webpack来执行了，他得用webpack-dev-server这个工具来执行，也就是
+
+``` 
+	webpack-dev-server --config path/to/config.js
+```
+如何你的配置文件名为`webpack.config.js`那也可以直接使用`webpack-dev-server`执行
+ 
 
 ### 注意事项
 
