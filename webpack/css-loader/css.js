@@ -523,18 +523,34 @@ function updateLink (link, options, obj) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__body_less__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__body_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__body_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_sass__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__footer_sass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_css__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__header_css__);
-throw new Error("Cannot find module \"./modal.styl\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__theme_body_less__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__theme_body_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__theme_body_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__theme_footer_sass__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__theme_footer_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__theme_footer_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_header_css__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__theme_header_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_modal_styl__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_modal_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__theme_modal_styl__);
 
 
 
 
 
+
+const oBtn = document.querySelector('#btn1');
+const oModal = document.querySelector('#componentModal')
+
+oBtn.addEventListener('click', function(){
+	oModal.style.display = 'block';
+}, false)
+
+oModal.addEventListener('click', function(ev){ 
+	oModal.style.display = 'none' 
+}, false)
+
+oModal.querySelector('.modal-content').addEventListener('click', function(ev){
+	ev.stopPropagation();
+}, false)
 
 /***/ }),
 /* 3 */
@@ -557,8 +573,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less", function() {
-			var newContent = require("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less");
+		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less", function() {
+			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.4.0.5@less-loader/dist/cjs.js!./body.less");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -576,7 +592,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "body header {\n  background: red;\n}\n", ""]);
+exports.push([module.i, "html * {\n  margin: 0;\n  padding: 0;\n}\nhtml input {\n  border: none;\n  outline: none;\n  background: none;\n  cursor: pointer;\n}\nhtml .page-index {\n  min-height: 200px;\n  text-align: center;\n  margin: 100px 0;\n}\nhtml .page-index p {\n  margin-bottom: 20px;\n}\nhtml .btn {\n  display: inline-block;\n  padding: 6px 12px;\n  margin-bottom: 0;\n  font-size: 14px;\n  font-weight: 400;\n  line-height: 1.42857143;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -ms-touch-action: manipulation;\n  touch-action: manipulation;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\nhtml .btn-default {\n  color: #333;\n  background-color: #fff;\n  border-color: #ccc;\n}\n", ""]);
 
 // exports
 
@@ -697,8 +713,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.6.0.6@sass-loader/lib/loader.js!./footer.sass", function() {
-			var newContent = require("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.6.0.6@sass-loader/lib/loader.js!./footer.sass");
+		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.6.0.6@sass-loader/lib/loader.js!./footer.sass", function() {
+			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.6.0.6@sass-loader/lib/loader.js!./footer.sass");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -716,7 +732,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".component-footer {\n  width: 100%;\n  height: 80px;\n  line-height: 80px;\n  font-size: 20px;\n  padding: 0 20px;\n  background: #c1d5eb; }\n", ""]);
 
 // exports
 
@@ -742,8 +758,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/.0.28.7@css-loader/index.js!./header.css", function() {
-			var newContent = require("!!../node_modules/.0.28.7@css-loader/index.js!./header.css");
+		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!./header.css", function() {
+			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!./header.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -761,7 +777,52 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".component-header\r\n{\r\n\twidth:100%;\r\n\theight: 80px;\r\n\tline-height: 80px;\r\n\tfont-size: 20px;\r\n\tpadding:0 20px;\r\n\tborder-bottom: 1px solid #ccc;\r\n}", ""]);
+exports.push([module.i, ".component-header\r\n{\r\n\twidth:100%;\r\n\theight: 80px;\r\n\tline-height: 80px;\r\n\tfont-size: 20px;\r\n\tpadding:0 20px;\r\n\tbackground:#4ba8c9;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(1)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.3.0.1@stylus-loader/index.js!./modal.styl", function() {
+			var newContent = require("!!../../node_modules/.0.28.7@css-loader/index.js!../../node_modules/.3.0.1@stylus-loader/index.js!./modal.styl");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".component-modal {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  background: rgba(0,0,0,0.3);\n  display: none;\n}\n.component-modal .modal-content {\n  width: 500px;\n  height: 300px;\n  background: #fff;\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  border-radius: 5px;\n  transition: all 0.5s ease;\n}\n.component-modal .modal-content p {\n  font-size: 30px;\n  line-height: 300px;\n}\n", ""]);
 
 // exports
 
