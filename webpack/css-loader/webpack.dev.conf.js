@@ -5,8 +5,7 @@ module.exports = {
 	output:{
 		filename:"css.js",
 		path:__dirname
-	},
-	devtool:"source-map",
+	}, 
 	module:{
 		loaders:[
 			{
