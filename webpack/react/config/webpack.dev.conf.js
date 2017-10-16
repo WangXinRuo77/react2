@@ -5,11 +5,10 @@ const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry:path.resolve(__dirname,'../src/idnex.jsx'),
+	entry:path.resolve(__dirname,'../src/index.js'),
 	output:{
-		path:__dirname,
-		publicPath:"/",
-		filename:"[id].[chunkHash].js",
+		path:path.resolve(__dirname,'..'),
+		filename:"[id].[hash].js",
 	},
 	module: {
 		loaders: [
