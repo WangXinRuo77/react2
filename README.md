@@ -1,4 +1,3 @@
-# 简介
+# introduce
 
-前端自动化工具demo集合
 
