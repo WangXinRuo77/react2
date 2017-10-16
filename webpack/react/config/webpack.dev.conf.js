@@ -13,13 +13,13 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			// {
-			// 	test:/\.jsx?$/,
-			// 	loader:"babel-loader",
-			// 	query:{
-			// 		presets:["es2015",'react']
-			// 	}
-			// },
+			{
+				test:/\.jsx?$/,
+				loader:"babel-loader",
+				query:{
+					presets:["es2015",'react']
+				}
+			},
 		]
 	},
 	devServer:{
@@ -42,6 +42,7 @@ module.exports = {
 				removeComments:true,
 				collapseWhitespace:true
 			}
-		})
+		}),
+		new webpack.HotModuleReplacementPlugin()
 	]
 }
