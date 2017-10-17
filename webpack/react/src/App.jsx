@@ -8,6 +8,9 @@ import { Layout } from 'antd';
 import 'antd/dist/antd.css'
 import '../ui/default.less';
 
+// iconfont
+
+import '../static/fonts/iconfont.css'
 
 export default class App extends React.Component {
 	constructor(){
