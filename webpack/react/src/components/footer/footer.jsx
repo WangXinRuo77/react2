@@ -37,14 +37,14 @@ export default class ComponentFooter extends React.Component {
 			openMessage('error','请填写您的联系方式');
 			return;
 		}
-		
+
 		this.setState({
 			customer:{
 				contract:"",
 				type:"项目类型"
 			}
 		});
-		openMessage('success','成功')
+		openMessage('success','提交成功!')
 
 	}
 	setCustomerContract(ev){
