@@ -1,10 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ComponentHeader from './components/header/header.jsx';
+import ComponentFooter from './components/footer/footer.jsx';
 
-import ComponentHeader from './components/header.jsx';
-import ComponentFooter from './components/footer.jsx';
+import { Layout } from 'antd';
 
-class Index extends React.Component {
+// ui theme 
+import 'antd/dist/antd.css'
+import '../ui/theme/default.less';
+
+
+export default class App extends React.Component {
 	constructor(){
 		super()
 		this.state = {
@@ -14,16 +19,12 @@ class Index extends React.Component {
 
 	render(){
 		return (
-			<div>
+			<main>
 				<ComponentHeader />
-				<h1>{this.state.name}</h1>				
+				<h1 style={{height:'600px'}}>{this.state.name}</h1>				
 				<ComponentFooter />
-			</div>
+			</main>
 		)
 	}
 }
 
-ReactDOM.render(
-	<Index />,
-	document.querySelector('#app')
-)
