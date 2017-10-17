@@ -1,3 +1,3 @@
-const getSrc = (url) => import(`static/${url}`);
+const getSrc = (url) => url;
 
 export default getSrc;

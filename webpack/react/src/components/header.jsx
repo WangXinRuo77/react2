@@ -2,7 +2,7 @@ import React from 'react';
 import devPath from '../utils/path.js';
 import getImage from '../utils/getImage.js';
 
-export default class ComponentHeader extends React.component {
+export default class ComponentHeader extends React.Component {
 	constructor(){
 		super()
 	}
@@ -17,7 +17,7 @@ export default class ComponentHeader extends React.component {
 				<div className="logo" >
 					<h1>
 						<a href="" >
-							<img src={getImage('/images/logo.jpg')}/>
+							<img />
 						</a>
 					</h1>
 				</div>
