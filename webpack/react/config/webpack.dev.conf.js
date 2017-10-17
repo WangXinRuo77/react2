@@ -10,6 +10,7 @@ module.exports = {
 		path:path.resolve(__dirname,'..'),
 		filename:"[id].[hash].js",
 	},
+	devtool:"source-map",
 	module: {
 		loaders: [
 			{
