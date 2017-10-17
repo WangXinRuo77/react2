@@ -1,26 +1,42 @@
 import React from 'react'; 
-import { Row , Col } from 'antd';
-
+import './footer.less';
+import { Row , Col , Select , Input , Button  } from 'antd';
+const InputGroup = Input.Group;
 export default class ComponentFooter extends React.Component {
 	constructor(){
 		super()
 	}
 
 	render(){
+		const ProjectType = [
+			"LOGO/VI设计",
+			"海报/宣传册设计",
+			"WEB/H5设计",
+			"APP设计",
+			"产品/包装设计",
+			"插画/绘本设计"
+		];
+		const ProjectTypeList = [];
+		ProjectType.forEach((item,index)=>{
+			ProjectTypeList.push(	
+				<Option key={item}>
+					{item}
+				</Option>
+			)	
+		})
+		console.log(ProjectTypeList)
 		return(
 			<footer className="component-footer">
-				<Row className="pd150">
+				<Row className="">
 					<Col span={16} offset={4}>
 						<p>企业有设计需求不知道如何发布竞赛？留下联系方式让精于协助你。</p>
-						<div className="helper">
-							<select>
-								<option>a</option>
-								<option>a</option>
-								<option>a</option>
-							</select>
-							<input type="text" placeholder="你的手机号或邮箱" />
-							<button className="button button-dark">提交</button>
-						</div>
+						<InputGroup className="helper" compact>
+							<Select style={{ width: "17%"}}  defaultValue="项目类型">
+								{ProjectTypeList}
+							</Select>
+							<Input style={{ width: "25%"}} type="text" placeholder="你的手机号或邮箱" />
+							<Button >提交</Button> 
+						</InputGroup>
 						<div className="third">
 							<p>关注精于设计</p>
 							<ol>

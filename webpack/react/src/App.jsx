@@ -6,7 +6,7 @@ import { Layout } from 'antd';
 
 // ui theme 
 import 'antd/dist/antd.css'
-import '../ui/theme/default.less';
+import '../ui/default.less';
 
 
 export default class App extends React.Component {
