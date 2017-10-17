@@ -2,8 +2,9 @@ import React from 'react';
 import ComponentHeader from './components/header/header.jsx';
 import ComponentFooter from './components/footer/footer.jsx';
 
+import Message from './plugins/message/message.jsx';
 import { Layout } from 'antd';
-
+import  regexp  from './utils/regexp';
 // ui theme 
 import 'antd/dist/antd.css'
 import '../ui/default.less';
