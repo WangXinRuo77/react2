@@ -1,21 +1,46 @@
 .component-header {
-	height: 50px;
+	height: 106px;
+	background-color: #fff;
+	color: #666;
 	.header-abs {
-		margin-top: 50px;
 		display: flex;
-		justify-content: flex-end;
-		text-align: center;
+	  flex-wrap: wrap; 
+	  flex-direction:row-reverse;
+	  justify-content:space-between;
+	  height: 106px;
+	  .nav {
+	  	display: flex;
+	  }
 		.logo {
+			padding-left: 70px;
+			a {
+				height: 100%;
+				display: flex;
+  			align-items: center;
+			}
 		};
-		.nav {
-			color:#fff;
-			.nav-item {
+		.link { 
+			position: relative;
+			.link-item {
+				height: 100%;
 				display: inline-block;
-				width: 102px;
+				text-align: center;
+				margin-right: 60px;
+			};
+			&:after {
+				position: absolute;
+				right: 0;
+				top: 40px;
+				display: block;
+				content:"";
+				width: 1px;
+				height:25px;
+				background: #666;
+
 			}
 		};
 		.nav-text-zh {
-			margin-top: 10px;
+			margin-top: 36px;
 			display: block;
 		}
 		.nav-text-en {
@@ -26,19 +51,20 @@
 		}		
 		.sign {
 			display: flex;
+			height: 100%;
+			text-align: center;
 			.sign-link {
 				flex:auto;
-				width: 102px;
-				height: 55px; 
+				width: 140px;
 				letter-spacing: 2px;
-				color: #fff;
 			}
 			.sign-up {
-				color: #000;
-				background-color: #fff217;				
+				color: #fff;
+				background-color: #1589fc;				
 			}
 		};
-		.user {	
+		.user {
+			
 		}
 
 	}

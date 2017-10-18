@@ -20,44 +20,57 @@ export default class ComponentHeader extends React.Component {
 					<Col span={24}>
 						<div className="header-abs">
 							{/* nav */}
-							<nav className="nav">
-								<a className="nav-item" href="">
-									<span className="nav-text-zh">首页</span>
-									<span className="nav-text-en">HOME</span>
-								</a>
-								<a className="nav-item" href="">
-									<span className="nav-text-zh">竞赛</span>
-									<span className="nav-text-en">CONTEST</span>
-								</a>
-								<a className="nav-item" href="">
-									<span className="nav-text-zh">流程</span>
-									<span className="nav-text-en">PROCEDURE</span>
-								</a>
-								<a className="nav-item" href="">
-									<span className="nav-text-zh">发布</span>
-									<span className="nav-text-en">LAUNCH</span>
-								</a>
-								<a className="nav-item" href="">
-									<span className="nav-text-zh">关于</span>
-									<span className="nav-text-en">ABOUT</span>
-								</a>
-							</nav>
-							{/* unLogin */}
-							<div className="sign">
-								<a className='sign-link' href="" >
-									<span className="nav-text-zh">登录</span>
-									<span className="nav-text-en">SIGN IN</span>
-								</a>
-								<a className='sign-link sign-up' href="" >
-									<span className="nav-text-zh">注册</span>
-									<span className="nav-text-en">SIGN UP</span>
-								</a>
+							<div className="nav">
+								{/* link */}
+								<nav className="link">
+									<a className="link-item" href="">
+										<span className="nav-text-zh">首页</span>
+										<span className="nav-text-en">HOME</span>
+									</a>
+									<a className="link-item" href="">
+										<span className="nav-text-zh">竞赛</span>
+										<span className="nav-text-en">CONTEST</span>
+									</a>
+									<a className="link-item" href="">
+										<span className="nav-text-zh">流程</span>
+										<span className="nav-text-en">PROCEDURE</span>
+									</a>
+									<a className="link-item" href="">
+										<span className="nav-text-zh">发布</span>
+										<span className="nav-text-en">LAUNCH</span>
+									</a>
+									<a className="link-item" href="">
+										<span className="nav-text-zh">关于</span>
+										<span className="nav-text-en">ABOUT</span>
+									</a>
+								</nav>			
+								{/* unLogin */}
+								<div className="sign">
+									<a className='sign-link' href="" >
+										<span className="nav-text-zh">登录</span>
+										<span className="nav-text-en">SIGN IN</span>
+									</a>
+									<a className='sign-link sign-up' href="" >
+										<span className="nav-text-zh">注册</span>
+										<span className="nav-text-en">SIGN UP</span>
+									</a>
+								</div>						
+								{/* user */}
+								<div className="user hide">
+									<div className="avatar">you have login</div>
+								</div>																
 							</div>
-							{/* user */}
-							<div className="user hide">
-								<div className="avatar">you have login</div>
-							</div>
-						</div>
+							{/* logo */}									
+							<div className="logo">
+								<a href="/" >
+									<img src="./static/images/logo.jpg" />
+								</a>	
+							</div>									
+						</div>					
+					</Col>
+				</Row>
+				<Row className="hide">
+					<Col>
 						<div className="header-fix hide">
 							{/*logo*/}
 							<div className="logo" >
@@ -82,10 +95,9 @@ export default class ComponentHeader extends React.Component {
 							<div className="user">
 								<div className="avatar">you have login</div>
 							</div>				
-						</div>						
+						</div>							
 					</Col>
 				</Row>
-
 			</header>
 		)
 	}
