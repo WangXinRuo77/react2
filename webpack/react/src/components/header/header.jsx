@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row , Col } from 'antd';
-
+import { Link } from 'react-router-dom';
 
 
 import './header.less';
@@ -15,7 +15,7 @@ export default class ComponentHeader extends React.Component {
 					home:28,
 					contest:137,
 					procedure:265,
-					luanch:387,
+					case:387,
 					about:491,
 			}
 		}
@@ -50,26 +50,26 @@ export default class ComponentHeader extends React.Component {
 							<div className="nav">
 								{/* link */}
 								<nav className="link" onMouseOver={this.updateMarkerLeft.bind(this)}>
-									<a data-marker="home" className="link-item" href="">
+									<Link data-marker="home" className="link-item" to="/">
 										<span className="nav-text-zh">首页</span>
 										<span className="nav-text-en">HOME</span>
-									</a>
-									<a data-marker="contest"  className="link-item" href="">
+									</Link>
+									<Link data-marker="contest"  className="link-item" to="/contest">
 										<span className="nav-text-zh">竞赛</span>
 										<span className="nav-text-en">CONTEST</span>
-									</a>
-									<a data-marker="procedure"  className="link-item" href="">
+									</Link>
+									<Link data-marker="procedure"  className="link-item" to="/procedure">
 										<span className="nav-text-zh">流程</span>
 										<span className="nav-text-en">PROCEDURE</span>
-									</a>
-									<a data-marker="luanch"  className="link-item" href="">
-										<span className="nav-text-zh">发布</span>
-										<span className="nav-text-en">LAUNCH</span>
-									</a>
-									<a data-marker="about"  className="link-item" href="">
+									</Link>
+									<Link data-marker="case"  className="link-item" to="/case">
+										<span className="nav-text-zh">案例</span>
+										<span className="nav-text-en">CASE</span>
+									</Link>
+									<Link data-marker="about"  className="link-item" to="/about">
 										<span className="nav-text-zh">关于</span>
 										<span className="nav-text-en">ABOUT</span>
-									</a>
+									</Link>
 									<hr className="marker" style={{'left':this.state.markerMap[this.state.path]+'px'}}/>
 								</nav>			
 								{/* unLogin */}
