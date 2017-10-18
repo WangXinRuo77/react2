@@ -8,11 +8,38 @@ import './header.less';
  
 export default class ComponentHeader extends React.Component {
 	constructor(){
-		super()
+		super();
+		this.state = {
+			path:'home',
+			markerMap:{
+					home:28,
+					contest:137,
+					procedure:265,
+					luanch:387,
+					about:491,
+			}
+		}
 	}
 	componentWillMount(){
 
 	} 
+	updateMarkerLeft(ev){
+		let currentPathNode = ev.target; 
+		
+		if(currentPathNode.nodeName.toLowerCase() == 'hr') return;
+
+		while (currentPathNode.nodeName.toLowerCase() !== 'a') {
+			currentPathNode = currentPathNode.parentNode;
+		}
+
+		const currentPath =currentPathNode.getAttribute('data-marker');
+		
+		if(currentPath == this.state.path) return;
+		
+		this.setState({
+			path:currentPath
+		})
+	}
 	render(){
 		return(
 			<header className="component-header">
@@ -22,27 +49,28 @@ export default class ComponentHeader extends React.Component {
 							{/* nav */}
 							<div className="nav">
 								{/* link */}
-								<nav className="link">
-									<a className="link-item" href="">
+								<nav className="link" onMouseOver={this.updateMarkerLeft.bind(this)}>
+									<a data-marker="home" className="link-item" href="">
 										<span className="nav-text-zh">首页</span>
 										<span className="nav-text-en">HOME</span>
 									</a>
-									<a className="link-item" href="">
+									<a data-marker="contest"  className="link-item" href="">
 										<span className="nav-text-zh">竞赛</span>
 										<span className="nav-text-en">CONTEST</span>
 									</a>
-									<a className="link-item" href="">
+									<a data-marker="procedure"  className="link-item" href="">
 										<span className="nav-text-zh">流程</span>
 										<span className="nav-text-en">PROCEDURE</span>
 									</a>
-									<a className="link-item" href="">
+									<a data-marker="luanch"  className="link-item" href="">
 										<span className="nav-text-zh">发布</span>
 										<span className="nav-text-en">LAUNCH</span>
 									</a>
-									<a className="link-item" href="">
+									<a data-marker="about"  className="link-item" href="">
 										<span className="nav-text-zh">关于</span>
 										<span className="nav-text-en">ABOUT</span>
 									</a>
+									<hr className="marker" style={{'left':this.state.markerMap[this.state.path]+'px'}}/>
 								</nav>			
 								{/* unLogin */}
 								<div className="sign">
@@ -65,7 +93,7 @@ export default class ComponentHeader extends React.Component {
 								<a href="/" >
 									<img src="./static/images/logo.jpg" />
 								</a>	
-							</div>									
+							</div>	
 						</div>					
 					</Col>
 				</Row>
