@@ -64,7 +64,11 @@ module.exports = {
 		},
 		staticOptions: {
 
-		}
+		},
+    watchOptions: {
+      aggregateTimeout : 300,
+      poll             : 1000,
+    },		
 	},
 	plugins:[
 		new HtmlWebpackPlugin({
