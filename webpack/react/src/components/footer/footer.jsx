@@ -84,8 +84,7 @@ export default class ComponentFooter extends React.Component {
 		return(
 			<footer className="component-footer">
 				<Row className="">
-					<Col span={16} offset={4}>
-						<p>企业有设计需求不知道如何发布竞赛？留下联系方式让精于协助你。</p>
+					<Col span={18} offset={3}>
 						<InputGroup className="helper" compact>
 							<Select onChange={this.setCustomerType.bind(this)} style={{ width: "17%"}}  defaultValue={this.state.customer.type}>
 								{ProjectTypeList}
@@ -93,6 +92,7 @@ export default class ComponentFooter extends React.Component {
 							<Input onChange={this.setCustomerContract.bind(this)} value={this.state.customer.contract} style={{ width: "25%"}} type="text" placeholder="你的手机号或邮箱" />
 							<Button onClick={this.submitCustomer.bind(this)}>提交</Button> 
 						</InputGroup>
+						<p className="mb40">企业有设计需求不知道如何发布竞赛？留下联系方式让精于协助你。</p>
 						<div className="third">
 							<p>关注精于设计</p>
 							<ol className="third-list">
