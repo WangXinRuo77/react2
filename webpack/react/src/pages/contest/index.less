@@ -1,0 +1,64 @@
+.page-contest {
+	.component-banner {
+		width: 100%;
+		height: 400px;
+		background: url('/static/images/index-banner.jpg');
+		background-size: cover;
+		background-position: left top;
+		position: relative;
+		.wrapper {
+			width: 100%;
+			height: 84px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.container {
+			width: 1160px;
+			padding:0px 40px;
+			height: 84px;
+			line-height: 84px;
+			display: flex;
+			justify-content:space-between;
+			margin: 0 auto;
+			background-color: #f8f8f8;			
+		}
+		.sort {
+			.item {
+				padding: 0px 20px;
+				border-right: 1px dotted #ddd;
+				letter-spacing: 2px;
+				color: #666;
+				cursor: pointer;
+			}
+			.active {
+				color: #000;
+				position: relative;
+				&:after {
+					display: block;
+					position: absolute;
+					left: 20px;
+					bottom:-10px;
+					content:"";
+					width:60px;
+					height: 2px;
+					background-color: #000;
+				}
+			}
+			.item:last-child {
+				border-right: none;
+			}
+			.item:first-child {
+				// padding-left: 0;
+			}
+		}
+		.deploy {
+			font-size: 20px;
+			letter-spacing: 2px;
+			.icon {
+				font-size: 20px;
+				margin-left: 20px;
+			}
+		}
+	}
+}
