@@ -12,7 +12,8 @@ body,button,p,pre {
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
-    font: inherit
+    font: inherit;
+    color: inherit;
 }
 
 ol,ul {
@@ -35,5 +36,11 @@ a {
     text-decoration: none;
     &:hover {
         color:inherit;
+        border: none;
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+        border:none;
     }
 }
