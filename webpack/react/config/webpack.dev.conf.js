@@ -79,5 +79,10 @@ module.exports = {
 			}
 		}),
 		new webpack.HotModuleReplacementPlugin()
-	]
+	],
+	resolve:{
+		alias: {
+			"@style":path.resolve(__dirname,'../src/style')
+		}
+	}
 }
