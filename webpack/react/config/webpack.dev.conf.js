@@ -82,7 +82,10 @@ module.exports = {
 	],
 	resolve:{
 		alias: {
-			"@style":path.resolve(__dirname,'../src/style')
+			"@style": path.resolve(__dirname,'../src/style'),
+			"@pages": path.resolve(__dirname,'../src/pages'),
+			"@components": path.resolve(__dirname,'../src/components'),
+			"@utils": path.resolve(__dirname,'../src/utils')
 		}
 	}
 }
