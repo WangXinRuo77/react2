@@ -1,5 +1,6 @@
 import React from 'react'; 
-import './footer.less';
+import '@style/component_footer.less';
+
 import { Row , Col , Select , Input , Button , Popover , message  } from 'antd';
 
 const InputGroup = Input.Group;

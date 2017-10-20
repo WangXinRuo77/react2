@@ -3,7 +3,7 @@ import { Row , Col } from 'antd';
 import { Link } from 'react-router-dom';
 
 
-import './header.less';
+import '@style/component_header.less';
 
  
 export default class ComponentHeader extends React.Component {
