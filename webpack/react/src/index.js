@@ -21,19 +21,56 @@ import ComponentFooter from './components/footer/footer.jsx';
 import PageIndex from './pages/index/index.jsx';
 import PageContest from './pages/contest/index.jsx';
 import PageProcedure from './pages/procedure/index.jsx';
-import PageCase from './pages/case/index.jsx';
-import PageAbout from './pages/about/index.jsx'; 
 
+import PageCase from './pages/case/index.jsx';
+import PageAbout from './pages/about/index.jsx';  
+ 
+
+const RouterMap = [
+	{
+		path:"/",
+		component:PageIndex
+	},
+	{
+		path:"/contest",
+		component: PageContest
+	},
+	{
+		path: "/procedure",
+		component: PageProcedure,
+	},
+	{
+		path: "/case",
+		component: PageCase
+	},
+	{
+		path: "/about",
+		component: PageAbout
+	}
+]
+
+const CreateRoute = (route) => (
+	<Route path={route.path}  render={props => (
+		<route.component { ...props } routes={ route.routes } />
+	)} />
+) 
 
 ReactDOM.render(
 	<Router >
 		<div>
 			<ComponentHeader />
-			<Route exact path="/" component={ PageIndex }></Route>
-			<Route path="/contest" component={ PageContest }></Route>
-			<Route path="/procedure" component={ PageProcedure }></Route>
-			<Route path="/case" component={ PageCase }></Route>
-			<Route path="/about" component={ PageAbout }></Route> 
+			<Route exact path="/" component={ PageIndex } />
+			<Route path="/contest" component={ PageContest } />
+			<Route path="/procedure" component={ PageProcedure } />
+			<Route path="/case" component={ PageCase } />
+			<Route path="/about" component={ PageAbout } /> 
+			{/*
+			{
+				RouterMap.map((route,index) => (
+					<CreateRoute key={ index } {...route} />
+				))
+			}
+			*/} 	
 			<ComponentFooter />
 		</div>
 	</Router>,
