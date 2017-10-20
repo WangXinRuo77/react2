@@ -10,7 +10,7 @@ export default class DesignerProcedure extends React.Component {
 	render(){
 		return (
 			<main className="component-designer">
-				<h1 class="text-center">this is designer in procedure</h1>
+				<h1 className="text-center">this is designer in procedure</h1>
 			</main>
 		)
 	}

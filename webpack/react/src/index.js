@@ -64,10 +64,9 @@ ReactDOM.render(
 			<ComponentHeader />
 			<Route exact path="/" component={ PageIndex } />
 			<Route path="/contest" component={ PageContest } />
-			<Route path="/procedure" component={ PageProcedure } >
-				<Route path="/procedure/designer" component={ PageProcedureDesigner } />
-				<Route path="/procedure/customer" component={ PageProcedureCustomer } />
-			</Route>	
+			<Route path="/procedure" component={ PageProcedure } />	
+			<Route path="/procedure/designer" component={ PageProcedureDesigner } />
+			<Route path="/procedure/customer" component={ PageProcedureCustomer } />
 			<Route path="/case" component={ PageCase } />
 			<Route path="/about" component={ PageAbout } /> 
 			<ComponentFooter />
