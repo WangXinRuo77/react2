@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './index.less';
+import '@style/page_contest_index.less';
 
 export default class Contest extends React.Component {
 	constructor(){

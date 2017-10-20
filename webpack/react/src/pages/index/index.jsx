@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.less'; 
+import '@style/page_index_index.less'; 
 
 export default class Index extends React.Component {
 	constructor(){
