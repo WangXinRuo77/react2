@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
+  Redirect
 } from 'react-router-dom'
 
 
@@ -56,7 +57,8 @@ const CreateRoute = (route) => (
 		<route.component { ...props } routes={ route.routes } />
 	)} />
 ) 
-
+// <Route path="/procedure/designer" component={ PageProcedureDesigner } />
+// <Route path="/procedure/customer" component={ PageProcedureCustomer } />
 
 ReactDOM.render(
 	<Router >
@@ -64,9 +66,7 @@ ReactDOM.render(
 			<ComponentHeader />
 			<Route exact path="/" component={ PageIndex } />
 			<Route path="/contest" component={ PageContest } />
-			<Route path="/procedure" component={ PageProcedure } />	
-			<Route path="/procedure/designer" component={ PageProcedureDesigner } />
-			<Route path="/procedure/customer" component={ PageProcedureCustomer } />
+			<Route path="/procedure" component = { PageProcedure} />	
 			<Route path="/case" component={ PageCase } />
 			<Route path="/about" component={ PageAbout } /> 
 			<ComponentFooter />
