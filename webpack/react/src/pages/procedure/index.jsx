@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link , Router, Route, HashRouter } from 'react-router-dom';
+import PageProcedureCustomer from '@pages/procedure/customer.jsx';
+import PageProcedureDesigner from '@pages/procedure/designer.jsx';
+import { Link , Router, Route, Redirect, Switch } from 'react-router-dom';
 import "@style/page_procedure_index.less"; 
 
 export default class Procedure extends React.Component {
@@ -15,6 +17,12 @@ export default class Procedure extends React.Component {
 						<h1> this is procedure page!</h1>
 						<Link to="/procedure/customer">customer</Link>
 						<Link to="/procedure/designer">designer</Link>
+					</div>
+					<div className="component-">
+						<Switch>
+							<Route exact path="/procedure/designer" component={ PageProcedureDesigner } />
+							<Route path="/procedure/customer" component={ PageProcedureCustomer } />
+						</Switch>
 					</div>
 				</div> 	
 			</main>
