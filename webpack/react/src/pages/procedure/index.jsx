@@ -20,7 +20,8 @@ export default class Procedure extends React.Component {
 					</div>
 					<div className="component-">
 						<Switch>
-							<Route exact path="/procedure/designer" component={ PageProcedureDesigner } />
+							<Route exact path="/" component = { PageProcedureDesigner } />
+							<Route path="/procedure/designer" component={ PageProcedureDesigner } />
 							<Route path="/procedure/customer" component={ PageProcedureCustomer } />
 						</Switch>
 					</div>
