@@ -25,7 +25,7 @@ import PageProcedure from './pages/procedure/index.jsx';
 import PageProcedureCustomer from '@pages/procedure/customer.jsx';
 import PageProcedureDesigner from '@pages/procedure/designer.jsx';
 
-import PageCase from './pages/case/index.jsx';
+import PageLaunch from './pages/launch/index.jsx';
 import PageAbout from './pages/about/index.jsx';  
  
 
@@ -43,8 +43,8 @@ const RouterMap = [
 		component: PageProcedure,
 	},
 	{
-		path: "/case",
-		component: PageCase
+		path: "/launch",
+		component: PageLaunch
 	},
 	{
 		path: "/about",
@@ -67,7 +67,7 @@ ReactDOM.render(
 			<Route exact path="/" component={ PageIndex } />
 			<Route path="/contest" component={ PageContest } />
 			<Route path="/procedure" component = { PageProcedure} />	
-			<Route path="/case" component={ PageCase } />
+			<Route path="/launch" component={ PageLaunch } />
 			<Route path="/about" component={ PageAbout } /> 
 			<ComponentFooter />
 		</div>
