@@ -99,6 +99,37 @@ export default class Case extends React.Component {
 						<span className="module-text">邮箱(选填)</span>
 						<input type="text" placeholder="邮箱" />
 					</div>
+				</div>
+				<div className="component-repo">
+					<div className="name">
+						<span className="module-text">项目类型</span>
+						<select>
+              <option value="">请选择</option>
+              <option value="LOGO/VI设计">LOGO/VI设计</option>
+              <option value="海报/宣传册设计">海报/宣传册设计</option>
+              <option value="WEB/H5设计">WEB/H5设计</option>
+              <option value="APP设计">APP设计</option>
+              <option value="产品/包装设计">产品/包装设计</option>
+              <option value="插画/绘本设计">插画/绘本设计</option>
+              <option value="更多">更多</option>							
+						</select>
+					</div>
+					<div className="name">
+						<span className="module-text">项目周期</span>
+						<select>
+              <option value="">请选择</option>
+              <option value="小于1周">小于1周</option>
+              <option value="1-2周">1-2周</option>
+              <option value="2-4周">2-4周</option>
+              <option value="1-2个月">1-2个月</option>
+              <option value="2个月以上">2个月以上</option>
+              <option value="不确定">不确定</option>							
+						</select>
+					</div>
+					<div className="name">
+						<span className="module-text">添加附件(选填)</span>
+						<input type="button" value="点击上传参考信息或项目说明（不超过10M）" />
+					</div>
 
 				</div>
 			</main>
