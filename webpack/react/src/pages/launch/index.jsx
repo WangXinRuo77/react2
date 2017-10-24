@@ -81,6 +81,24 @@ export default class Case extends React.Component {
 						<span className="module-text">公司介绍</span>
 						<textarea placeholder="描述一下您的公司，让设计师更懂你。"></textarea>
 					</div>
+				</div>
+				<div className="component-contract">
+					<div className="name">
+						<span className="module-text">姓名</span>
+						<input type="text" placeholder="姓名" />
+					</div>
+					<div className="name">
+						<span className="module-text">职务(选填)</span>
+						<input type="text" placeholder="职务" />
+					</div>
+					<div className="name">
+						<span className="module-text">手机</span>
+						<input type="text" placeholder="手机" />
+					</div>
+					<div className="name">
+						<span className="module-text">邮箱(选填)</span>
+						<input type="text" placeholder="邮箱" />
+					</div>
 
 				</div>
 			</main>
