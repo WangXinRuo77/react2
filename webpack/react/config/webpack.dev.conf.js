@@ -58,7 +58,7 @@ module.exports = {
 		hot: true,
 		inline: true,
 		open: true,
-		port: 8088,
+		port: 8089,
 		proxy: {
 
 		},
