@@ -15,7 +15,7 @@ export default class ComponentHeader extends React.Component {
 					home:28,
 					contest:137,
 					procedure:265,
-					case:387,
+					launch:387,
 					about:491,
 			}
 		}
@@ -62,9 +62,9 @@ export default class ComponentHeader extends React.Component {
 										<span className="nav-text-zh">流程</span>
 										<span className="nav-text-en">PROCEDURE</span>
 									</Link>
-									<Link data-marker="case"  className="link-item" to="/case">
-										<span className="nav-text-zh">案例</span>
-										<span className="nav-text-en">CASE</span>
+									<Link data-marker="launch"  className="link-item" to="/launch">
+										<span className="nav-text-zh">发布</span>
+										<span className="nav-text-en">LAUNCH</span>
 									</Link>
 									<Link data-marker="about"  className="link-item" to="/about">
 										<span className="nav-text-zh">关于</span>
