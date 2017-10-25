@@ -47,7 +47,7 @@ export default class Case extends React.Component {
 				</div>
 				<div className="component-company module-line">
 					<h3 className="module-title">公司信息</h3>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">公司名称</span>
 						<input type="text" placeholder="公司名称" />
 					</div>
@@ -83,25 +83,25 @@ export default class Case extends React.Component {
 					</div>
 				</div>
 				<div className="component-contract">
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">姓名</span>
 						<input type="text" placeholder="姓名" />
 					</div>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">职务(选填)</span>
 						<input type="text" placeholder="职务" />
 					</div>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">手机</span>
 						<input type="text" placeholder="手机" />
 					</div>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">邮箱(选填)</span>
 						<input type="text" placeholder="邮箱" />
 					</div>
 				</div>
 				<div className="component-repo">
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">项目类型</span>
 						<select>
               <option value="">请选择</option>
@@ -114,7 +114,7 @@ export default class Case extends React.Component {
               <option value="更多">更多</option>							
 						</select>
 					</div>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">项目周期</span>
 						<select>
               <option value="">请选择</option>
@@ -126,11 +126,52 @@ export default class Case extends React.Component {
               <option value="不确定">不确定</option>							
 						</select>
 					</div>
-					<div className="name">
+					<div className="common-module-item">
 						<span className="module-text">添加附件(选填)</span>
 						<input type="button" value="点击上传参考信息或项目说明（不超过10M）" />
 					</div>
-
+				</div>	
+				<div className="module-loadmore">
+					<p>继续填写更多信息？<i className="icon iconfont">&#xe674;</i></p>
+				</div>	
+				<div className="component-contract">
+					<div className="common-module-item">
+						<span className="module-text">数量要求(选填)</span>
+						<input type="text" placeholder="例如：几页H5" />
+					</div>
+					<div className="introduce">
+						<span className="module-text">
+							项目内容(选填)<i className="icon">?</i>
+							<div className="popup-tax hide">
+								<div className="container">
+									<p>根据国家相关法律法规及征管部门要求，设计师参与设计竞赛所获竞赛奖金按照“劳务报酬”缴纳个人所得税，精于设计以自然月为单位对设计师申请提现金额代扣代缴个人所得税，税额具体算法如下：</p>
+									<p>“月提现总金额”下简称“提现”</p>									
+									<p>① 提现≤800元的，不扣缴个人所得税</p>									
+									<p>② 800元＜提现≤4000元，个人所得税=(月提现金额-800)*20%</p>									
+									<p>③ 4000元＜提现≤25000元，个人所得税=月提现金额*80%*20%</p>									
+									<p>④ 25000元＜提现≤62500元，个人所得税=月提现金额*80%*30%-2000</p>									
+									<p>⑤ 62500元＜提现，个人所得税=月提现金额*80%*40%-7000</p>									
+								</div>
+							</div>
+						</span>
+						<textarea placeholder="描述一下您的公司，让设计师更懂你。"></textarea>
+					</div>
+				</div>
+				<div className="component-complete">
+					<h3 className="module-title">公司信息</h3>
+					<div className="common-module-item">
+						<div className="office">
+							<span className="module-text">公司官网(选填)</span>
+							<span className="module-prefix">http://</span>
+							<input className="module-half-input" type="text" placeholder="输入网址" />
+						</div>					
+					</div>
+				</div>	
+				<div className="component-argee">
+					<input type="checkbox" id="argeeLaunch" />我已阅读并同意遵守 <a href="">《需求方竞赛须知》</a>
+				</div>
+				<div className="component-submit">
+					<a className="btn btn-submit">提交竞赛</a>
 				</div>
 			</main>
 		)
