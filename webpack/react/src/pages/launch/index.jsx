@@ -6,20 +6,27 @@ export default class Case extends React.Component {
 	constructor(){
 		super()
 		this.state = {
+			currentTab:"login"
 		}
 	}
-
+	tabSwitch(tab){
+		this.setState({
+			currentTab:tab
+		})
+	}
 	render(){
+		let ShowLoginTab = this.state.currentTab == 'login' ? "block" :"none";
+		let ShowRegisterTab = this.state.currentTab == 'register' ? "block" :"none";
 		return (
 			<main className="page-launch">	
 				<h1 className="title">发布赛事，精于帮你找到满意的设计</h1>
 				<div className="component-account">
 					<nav className="nav">
-						<a className="item item-active">已有账号</a>
-						<a className="item">没有账号</a>
+						<a onClick={ this.tabSwitch('login') } className={ this.state.currentTab =="login"?"item item-active":"item" }>已有账号</a>
+						<a onClick={ this.tabSwitch('register') } className={ this.state.currentTab =="register"?"item item-active":"item" }>没有账号</a>
 					</nav>
 					<div className="user">
-						<div className="signup">
+						<div style={{ "display": "none" }} className="signup">
 							<div className="item" >
 								<span className="module-text">账号</span>
 								<input type="text" placeholder="邮箱或手机" />
@@ -29,7 +36,7 @@ export default class Case extends React.Component {
 								<input type="password" placeholder="密码" />
 							</div>
 						</div>
-						<div className="signin hide">
+						<div style={{ "display": "none" }}  className="signin hide">
 							<div className="item" >
 								<span className="module-text">账号</span>
 								<input type="text" placeholder="邮箱或手机" />
