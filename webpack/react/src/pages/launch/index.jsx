@@ -6,7 +6,12 @@ export default class Case extends React.Component {
 	constructor(){
 		super()
 		this.state = {
-			currentTab:"login"
+			currentTab:"login",
+			user:{
+				account:"",
+				passowrd:"",
+
+			}
 		}
 	}
 	tabSwitch(tab){
@@ -22,11 +27,11 @@ export default class Case extends React.Component {
 				<h1 className="title">发布赛事，精于帮你找到满意的设计</h1>
 				<div className="component-account">
 					<nav className="nav">
-						<a onClick={ this.tabSwitch('login') } className={ this.state.currentTab =="login"?"item item-active":"item" }>已有账号</a>
-						<a onClick={ this.tabSwitch('register') } className={ this.state.currentTab =="register"?"item item-active":"item" }>没有账号</a>
+						<a onClick={ this.tabSwitch.bind(this,'login') }  className={ this.state.currentTab =="login"?"item item-active":"item" }>已有账号</a>
+						<a onClick={ this.tabSwitch.bind(this,'register') }  className={ this.state.currentTab =="register"?"item item-active":"item"  }>没有账号</a>
 					</nav>
 					<div className="user">
-						<div style={{ "display": "none" }} className="signup">
+						<div style={{ "display": this.state.currentTab == "login"?"block":"none" }} className="signup">
 							<div className="item" >
 								<span className="module-text">账号</span>
 								<input type="text" placeholder="邮箱或手机" />
@@ -36,7 +41,7 @@ export default class Case extends React.Component {
 								<input type="password" placeholder="密码" />
 							</div>
 						</div>
-						<div style={{ "display": "none" }}  className="signin hide">
+						<div style={{ "display": this.state.currentTab == "register"?"block":"none" }}  className="signin hide">
 							<div className="item" >
 								<span className="module-text">账号</span>
 								<input type="text" placeholder="邮箱或手机" />
