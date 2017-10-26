@@ -16,6 +16,7 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 2. why webpack-dev-server recompile so snow and must reload this page?
 
+3. why webpack-dev-server will throw error new stop. it has threw more than 50 thousand
 
 # resolved
 
