@@ -2,6 +2,8 @@ import React from 'react';
 
 import "@style/page_launch_index.less"; 
 
+import Validate from '@utils/regexp.js'
+
 export default class Case extends React.Component {
 	constructor(){
 		super()
@@ -11,7 +13,8 @@ export default class Case extends React.Component {
 				account:"",
 				passowrd:"",
 
-			}
+			},
+
 		}
 	}
 	tabSwitch(tab){
@@ -19,11 +22,27 @@ export default class Case extends React.Component {
 			currentTab:tab
 		})
 	}
+	userLogin(){
+		if(this.state.currentTab == 'login') {
+			console.log(this.state)
+		}
+	}
+	WriteAccount(event) {
+		var Input = event.target || event.srcElement;
+		if(Validate.test()) {
+
+		}
+		this.setState({
+			user: {
+				account:Input.value			
+			}
+		})
+	}
 	render(){
 		let ShowLoginTab = this.state.currentTab == 'login' ? "block" :"none";
 		let ShowRegisterTab = this.state.currentTab == 'register' ? "block" :"none";
 		return (
-			<main className="page-launch">	
+			<main className="page-launch">	 
 				<h1 className="title">发布赛事，精于帮你找到满意的设计</h1>
 				<div className="component-account">
 					<nav className="nav">
@@ -34,11 +53,18 @@ export default class Case extends React.Component {
 						<div style={{ "display": this.state.currentTab == "login"?"block":"none" }} className="signup">
 							<div className="item" >
 								<span className="module-text">账号</span>
-								<input type="text" placeholder="邮箱或手机" />
+								<input 
+									value={ this.state.user.account } 
+									onChange={ this.WriteAccount.bind(this) } type="text" placeholder="邮箱或手机" />
 							</div>
+							<p className="tip tip-account">请输入正确的账号</p>
 							<div className="item">
 								<span className="module-text">密码</span>
-								<input type="password" placeholder="密码" />
+								<input 
+									type="password" 
+									value={ this.state.user.password } 
+									placeholder="密码" 
+									onBlur={ this.userLogin.bind(this) } />
 							</div>
 						</div>
 						<div style={{ "display": this.state.currentTab == "register"?"block":"none" }}  className="signin hide">
