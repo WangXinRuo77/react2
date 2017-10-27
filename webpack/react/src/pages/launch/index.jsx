@@ -4,6 +4,7 @@ import "@style/page_launch_index.less";
 
 import Validate from '@utils/regexp.js'
 
+import { Input } from 'antd';
 export default class Case extends React.Component {
 	constructor(){
 		super()
@@ -53,14 +54,14 @@ export default class Case extends React.Component {
 						<div style={{ "display": this.state.currentTab == "login"?"block":"none" }} className="signup">
 							<div className="item" >
 								<span className="module-text">账号</span>
-								<input 
+								<Input 
 									value={ this.state.user.account } 
 									onChange={ this.WriteAccount.bind(this) } type="text" placeholder="邮箱或手机" />
 							</div>
 							<p className="tip tip-account">请输入正确的账号</p>
 							<div className="item">
 								<span className="module-text">密码</span>
-								<input 
+								<Input 
 									type="password" 
 									value={ this.state.user.password } 
 									placeholder="密码" 
@@ -70,15 +71,15 @@ export default class Case extends React.Component {
 						<div style={{ "display": this.state.currentTab == "register"?"block":"none" }}  className="signin hide">
 							<div className="item" >
 								<span className="module-text">账号</span>
-								<input type="text" placeholder="邮箱或手机" />
+								<Input type="text" placeholder="邮箱或手机" />
 							</div>
 							<div className="item">
 								<span className="module-text">密码</span>
-								<input type="password" placeholder="密码" />
+								<Input type="password" placeholder="密码" />
 							</div>
 							<div className="item">
 								<span className="module-text">确认密码</span>
-								<input type="password" placeholder="确认密码" />
+								<Input type="password" placeholder="确认密码" />
 							</div>													
 						</div>
 					</div>
@@ -87,7 +88,7 @@ export default class Case extends React.Component {
 					<h3 className="module-title">公司信息</h3>
 					<div className="common-module-item">
 						<span className="module-text">公司名称</span>
-						<input type="text" placeholder="公司名称" />
+						<Input type="text" placeholder="公司名称" />
 					</div>
 					<div className="area">
 						<span className="module-text">行业领域</span>
@@ -113,7 +114,7 @@ export default class Case extends React.Component {
 					<div className="office">
 						<span className="module-text">公司官网(选填)</span>
 						<span className="module-prefix">http://</span>
-						<input className="module-half-input" type="text" placeholder="输入网址" />
+						<Input className="module-half-input" type="text" placeholder="输入网址" />
 					</div>
 					<div className="introduce">
 						<span className="module-text">公司介绍</span>
@@ -123,19 +124,19 @@ export default class Case extends React.Component {
 				<div className="component-contract">
 					<div className="common-module-item">
 						<span className="module-text">姓名</span>
-						<input type="text" placeholder="姓名" />
+						<Input type="text" placeholder="姓名" />
 					</div>
 					<div className="common-module-item">
 						<span className="module-text">职务(选填)</span>
-						<input type="text" placeholder="职务" />
+						<Input type="text" placeholder="职务" />
 					</div>
 					<div className="common-module-item">
 						<span className="module-text">手机</span>
-						<input type="text" placeholder="手机" />
+						<Input type="text" placeholder="手机" />
 					</div>
 					<div className="common-module-item">
 						<span className="module-text">邮箱(选填)</span>
-						<input type="text" placeholder="邮箱" />
+						<Input type="text" placeholder="邮箱" />
 					</div>
 				</div>
 				<div className="component-repo">
@@ -166,7 +167,7 @@ export default class Case extends React.Component {
 					</div>
 					<div className="common-module-item">
 						<span className="module-text">添加附件(选填)</span>
-						<input type="button" value="点击上传参考信息或项目说明（不超过10M）" />
+						<Input type="button" value="点击上传参考信息或项目说明（不超过10M）" />
 					</div>
 				</div>	
 				<div className="module-loadmore">
@@ -175,7 +176,7 @@ export default class Case extends React.Component {
 				<div className="component-contract">
 					<div className="common-module-item">
 						<span className="module-text">数量要求(选填)</span>
-						<input type="text" placeholder="例如：几页H5" />
+						<Input type="text" placeholder="例如：几页H5" />
 					</div>
 					<div className="introduce">
 						<span className="module-text">
@@ -201,12 +202,12 @@ export default class Case extends React.Component {
 						<div className="office">
 							<span className="module-text">公司官网(选填)</span>
 							<span className="module-prefix">http://</span>
-							<input className="module-half-input" type="text" placeholder="输入网址" />
+							<Input className="module-half-input" type="text" placeholder="输入网址" />
 						</div>					
 					</div>
 				</div>	
 				<div className="component-argee">
-					<input type="checkbox" id="argeeLaunch" />我已阅读并同意遵守 <a href="">《需求方竞赛须知》</a>
+					<Input type="checkbox" id="argeeLaunch" />我已阅读并同意遵守 <a href="">《需求方竞赛须知》</a>
 				</div>
 				<div className="component-submit">
 					<a className="btn btn-submit">提交竞赛</a>
