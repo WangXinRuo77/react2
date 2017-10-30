@@ -6,7 +6,8 @@ module.exports = {
 	entry:path.resolve(__dirname,'src/index.js'),
 	output:{
 		filename:"[id].[chunkHash].js",
-		path:__dirname,
+		path:path.resolve(__dirname,'dist'),
+		
 	},
 	module:{
 		rules:[
@@ -27,7 +28,7 @@ module.exports = {
 		]
 	},
 	plugins:[
-		new ExtractTextWebpackPlugin('header.sass'),
+		new ExtractTextWebpackPlugin('output.css'),
 		new HtmlWebpackPlugin({
 			template:path.resolve(__dirname,'src/index.html'),
 			minify:{
