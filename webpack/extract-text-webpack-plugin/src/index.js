@@ -1,2 +1,2 @@
-import './ui/header.sass';
-import './ui/footer.sass';
+import './ui/header.less';
+import './ui/footer.less';
