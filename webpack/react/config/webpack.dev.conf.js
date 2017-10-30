@@ -3,7 +3,7 @@ const webpack = require('webpack');
 // const WebpackDevServer = require('webpack-dev-server');
 const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 	entry:path.resolve(__dirname,'../src/index.js'),
 	output:{
@@ -21,14 +21,13 @@ module.exports = {
 				query:{
 					presets:["es2015",'react']
 				}
-			},
-			{
-				test:/\.css/,
-				loader:"style-loader!css-loader",
-			},
+			}, 
 			{
 				test:/\.less/,
-				loader:"style-loader!css-loader!less-loader"
+				use:ExtractTextWebpackPlugin.extract({
+					fallback:"style-loader",
+					use:["css-loader","less-loader"]
+				})
 			},
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -71,6 +70,7 @@ module.exports = {
     },		
 	},
 	plugins:[
+		new ExtractTextWebpackPlugin('css/[name].css'),
 		new HtmlWebpackPlugin({
 			template:path.resolve(__dirname,'../src/index.html'),
 			minify: {
