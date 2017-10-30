@@ -25,7 +25,7 @@ class Launch extends React.Component {
             <h1 className = "title" > 发布赛事， 精于帮你找到满意的设计 </h1>  
             <Tabs defaultActiveKey = "1" onChange = { this.Switch } >
             <TabPane tab = "Tab 1" key = "1" >
-                <FormItem>
+                <FormItem label="账号">
                     <Input placeholder="账号" {...getFieldDecorator('account')} />
                 </FormItem>
             </TabPane>  
