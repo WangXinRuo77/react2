@@ -12,10 +12,10 @@ module.exports = {
 	module:{
 		rules:[
 			{
-				test:/\.sass/,
+				test:/\.less/,
 				use:ExtractTextWebpackPlugin.extract({
 					fallback:"style-loader",
-					use:"style-loader!css-loader!sass-loader"
+					use:["css-loader","less-loader"]
 				})
 			},
 			{
