@@ -16,7 +16,9 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 2. why webpack-dev-server recompile so snow and must reload this page?
 
-3. why webpack-dev-server will throw error new stop. it has threw more than 50 thousand
+3. why webpack-dev-server will throw error never stop. it has threw more than 50 thousand?
+
+4. how to make .css,.less,.sass,.styl etc, style file compiled by css-loader,less-loader,sass-loader,stylus-loader, and then make output in one css file?
 
 # resolved
 
