@@ -8,13 +8,13 @@ import {
 
 
 // ui theme 
-import 'antd/dist/antd.css'
+import 'antd/dist/antd.less'
 import '../ui/default.less';
 
 
 
 // iconfont
-import '../static/fonts/iconfont.css'
+import '../static/fonts/iconfont.less'
 
 import ComponentHeader from './components/header/header.jsx';
 import ComponentFooter from './components/footer/footer.jsx';
