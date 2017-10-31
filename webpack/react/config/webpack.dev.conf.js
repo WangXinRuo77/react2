@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const ExtractLess = ("")
 module.exports = {
 	entry:path.resolve(__dirname,'../src/index.js'),
 	output:{
@@ -86,6 +87,7 @@ module.exports = {
 			"@pages": path.resolve(__dirname,'../src/pages'),
 			"@components": path.resolve(__dirname,'../src/components'),
 			"@utils": path.resolve(__dirname,'../src/utils')
-		}
+		},
+		extensions:[".js",".jsx",".less",".css"]
 	}
 }
