@@ -60,3 +60,13 @@ reference link: [stackoverflow](https://stackoverflow.com/questions/43161151/rea
 ### references
 
 [react-router-dom](https://reacttraining.com/react-router/web/example/basic)
+
+### experience 
+
+1. how to increase the speed of webpack first building and rebuild?
+
+* use cheap-module-eval-source-map instead of other devtools can improve 40% speed
+
+### reference
+
+1. vue-cli
