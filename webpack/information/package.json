@@ -1,0 +1,17 @@
+{
+  "name": "webpack-information-manage",
+  "version": "1.0.0",
+  "description": "a project to get how to manage webpack complie and build information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wangerniu",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  }
+}
