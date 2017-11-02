@@ -4,11 +4,14 @@ const webpack = require('webpack');
 const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-const ExtractLess = ("")
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
-	entry:path.resolve(__dirname,'../src/index.js'),
+	entry:{
+		"core":path.resolve(__dirname,'../src/index.js'),
+		"vender":["react","react-dom","react-router"]
+	},
 	output:{
-		path:path.resolve(__dirname,'..'),
+		path:path.resolve(__dirname,'../dist'),
 		filename:"[id].[hash].js",
 	},
 	devtool:"cheap-module-eval-source-map",
@@ -78,7 +81,9 @@ module.exports = {
     },		
 	},
 	plugins:[
+		// create css
 		new ExtractTextWebpackPlugin('css/whale.[chunkHash].css'),
+		// create html
 		new HtmlWebpackPlugin({
 			template:path.resolve(__dirname,'../src/index.html'),
 			minify: {
@@ -86,7 +91,9 @@ module.exports = {
 				collapseWhitespace:true
 			}
 		}),
+		// reload
 		new webpack.HotModuleReplacementPlugin(),
+		// minify js
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings:false,
@@ -94,6 +101,14 @@ module.exports = {
 			mangle: {
         except: ['$super', '$', 'exports', 'require']
     	}			
+		}),
+		// minify css
+		new OptimizeCssAssetsPlugin(),
+		// create manifest
+		new webpack.DllPlugin({
+			path:"manifest.json",
+			name:"[name]",
+			context:__dirname,
 		})
 	],
 	resolve:{
