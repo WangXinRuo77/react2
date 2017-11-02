@@ -11,7 +11,7 @@ module.exports = {
 		path:path.resolve(__dirname,'..'),
 		filename:"[id].[hash].js",
 	},
-	devtool:"source-map",
+	devtool:"cheap-module-eval-source-map",
 	module: {
 		loaders: [
 			{
@@ -30,6 +30,13 @@ module.exports = {
 					use:["css-loader","less-loader"]
 				})
 			},
+			{
+				test:/\.css/,
+				use:ExtractTextWebpackPlugin.extract({
+					fallback:"style-loader",
+					use:["css-loader"]
+				})
+			},			
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'file-loader',
@@ -71,7 +78,7 @@ module.exports = {
     },		
 	},
 	plugins:[
-		new ExtractTextWebpackPlugin('css/[name].css'),
+		new ExtractTextWebpackPlugin('css/whale.[chunkHash].css'),
 		new HtmlWebpackPlugin({
 			template:path.resolve(__dirname,'../src/index.html'),
 			minify: {
