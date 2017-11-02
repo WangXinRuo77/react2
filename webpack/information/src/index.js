@@ -1,4 +1,5 @@
-imoprt './styles/main.css';
+import './styles/main.css';
+
 import setBodyColor from  './scripts/main.js';
 
 
