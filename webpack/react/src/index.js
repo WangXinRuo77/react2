@@ -8,9 +8,9 @@ import {
 
 
 // ui theme 
-import 'antd/dist/antd.less'
 import '../ui/default.less';
 
+// import 'antd/dist/antd.less';
 
 
 // iconfont

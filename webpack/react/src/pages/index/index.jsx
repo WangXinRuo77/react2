@@ -17,8 +17,8 @@ export default class Index extends React.Component {
 					{/* banner */}
 					<div className="module-banner">
 						<div className="banner-panel">
-							<h3 className="global-modlue-zh">有钱有趣有原则的设计竞赛</h3>
-							<h3 className="global-modlue-en">Whale Design, Design Will.</h3>
+							<h3 className="global-modlue-zh">有钱有趣11有原则的设计竞赛</h3>
+							<h3 className="global-modlue-en">Whale Design, Desi1gn Will.</h3>
 							<div className="usage">
 								<div className="usage-item customer">
 									<p className="usage-text"><a href="">企业</a></p>
