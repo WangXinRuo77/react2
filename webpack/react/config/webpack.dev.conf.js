@@ -86,7 +86,15 @@ module.exports = {
 				collapseWhitespace:true
 			}
 		}),
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings:false,
+			},
+			mangle: {
+        except: ['$super', '$', 'exports', 'require']
+    	}			
+		})
 	],
 	resolve:{
 		alias: {
