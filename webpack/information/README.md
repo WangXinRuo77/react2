@@ -151,4 +151,91 @@ Child extract-text-webpack-plugin node_modules/.3.0.2@extract-text-webpack-plugi
 
 这个属性只有在`stats.assets`属性为true的时候有效,只对assets列表信息进行排序,默认值为*field*,但是*!field*会比默认值快0.4s左右
 
+4. stats.cached 
+
+缓存模块信息的输出,默认为true
+
+5. cachedAssets
+
+缓存模块信息列表,默认为true
+
+6. children
+
+好东西,所有插件编译信息的显示,这个真没什么用,默认还是true.开发环境建议关闭
+
+7. chunk
+
+chunk信息,默认为false
+
+```
+chunk    {0} 0.b7fb797bc63544562d3e.js, 0.b7fb797bc63544562d3e.css (main) 301 bytes [entry] [rendered]
+    [0] ./src/index.js 154 bytes {0} [built]
+    [1] ./src/styles/main.css 41 bytes {0} [built]
+    [2] ./src/scripts/main.js 106 bytes {0} [built]
+```
+
+8. chunkModules
+
+chunk的模块信息,这个一般还是别放出来了,个人感觉没必要
+
+9. chunkOrigins
+
+这个是chunk合并的源文件,感觉一般也用不到
+
+10. chunksSort
+
+chunk的模块的排序,默认还是field.
+
+11. context
+
+用了报错了,应该是参数错误的问题
+
+12. colors
+
+用不一样的色彩标记输出
+
+13. depth
+
+每个模块和入口的距离,展示出来就是后面的*[depth 1]*.没参考价值
+```
+[0] ./src/index.js 154 bytes {0} [depth 0] [built]
+   [1] ./src/styles/main.css 41 bytes {0} [depth 1] [built]
+   [2] ./src/scripts/main.js 106 bytes {0} [depth 1] [built]
+   [3] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 821 bytes [depth 2] [built]
+    + 3 hidden modules
+```
+14. entrypoints
+
+每个依赖的入口文件是否显示
+
+15. env
+
+是否添加*--env*的参数
+
+16. errors
+
+展示错误信息
+
+17. errorDetails
+展示错误详细信息
+
+18. hash
+
+展示hash值
+
+19. modules
+
+是否展示module模块,如下所示,一般来说是无用的
+```
+   [0] ./src/index.js 154 bytes {0} [built]
+   [1] ./src/styles/main.css 41 bytes {0} [built]
+   [2] ./src/scripts/main.js 106 bytes {0} [built]
+   [3] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 821 bytes [built]
+    + 3 hidden modules
+```
+20. maxModules
+
+最多展示的模块,这个模块没什么用
+
+
 

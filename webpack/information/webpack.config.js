@@ -15,9 +15,39 @@ module.exports = {
   // stats:"detailed",
   // stats:"verbose,
   stats: {
-    assets:true,
-    assetsSort:"!field",
-    cached:true,
+    // assets:true,
+    // assetsSort:"!field",
+    // cached:true,
+    // cachedAssets:true,
+    children:false,
+    // chunks:false,
+    // chunkModules:true,
+    // chunkOrigins:true,
+    // chunksSort:'!field',
+    // context:"src"
+    // colors:true,
+    // depth:false,
+    // entrypoints:false
+    // env:false,
+    // errors:true
+    // errorDetails:true,
+    // excludeAssets:""
+    // excludeModules:"",
+    // exclude:""
+    hash:true,
+    maxModules:2,
+    modules:true,
+    modulesSort:"field",
+    moduleTrace:true,
+    performance:true,
+    providedExports:true,
+    publicPath:true,
+    reasons:true,
+    source:true,
+    timings:true,
+    usedExports:false,
+    version:false,
+    warnings:true,
   },
   module:{
     loaders: [
