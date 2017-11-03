@@ -13,7 +13,12 @@ module.exports = {
   // stats:"none",
   // stats:"normal",
   // stats:"detailed",
-  stats:"verbose",
+  // stats:"verbose,
+  stats: {
+    assets:true,
+    assetsSort:"!field",
+    cached:true,
+  },
   module:{
     loaders: [
       {
