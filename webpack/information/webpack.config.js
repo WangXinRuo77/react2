@@ -8,7 +8,12 @@ module.exports = {
     filename:"[id].[chunkHash].js",
     path:path.resolve(__dirname,'dist')
   },
-  stats:"errors-only",
+  // stats:"errors-only",
+  // stats: "minimal",
+  // stats:"none",
+  // stats:"normal",
+  // stats:"detailed",
+  stats:"verbose",
   module:{
     loaders: [
       {
