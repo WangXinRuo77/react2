@@ -10,6 +10,8 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 ```
 
 
+
+
 # questions
 
 1. how to place some method and varible  which is used in whole application. just like some regexp ?
