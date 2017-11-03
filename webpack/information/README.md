@@ -1,16 +1,9 @@
 # introduce
 
-this information project is a repo for how to manage webpack complie,build information
+this information project is a repo for how to manage webpack complie,build information. the point to control webpack compile information is *stats* config argument!so. i will test every value for it. and write down every effect it is .the office document is [HERE](https://webpack.js.org/configuration/stats/#stats)
 
-the point to control webpack compile information is *stats* config argument!
 
-so. i will test every value for it. and write down every effect it is .
-
-the office document is [HERE](https://webpack.js.org/configuration/stats/#stats)
-
-i will introduce everyone by chinese.
-
-# stats 
+# stats 字符串基础配置
 
 1. errors-only
 
@@ -95,44 +88,67 @@ Child extract-text-webpack-plugin node_modules/.3.0.2@extract-text-webpack-plugi
 ```
 
 6. verbose
-最详细的模式：比detail的更详尽的说出了模块信息，但是真没什么用
+
+  冗余模式：比detail的更详尽的说出了模块信息，但是真没什么用
+
+  ```
+  Hash: 7ee911d29342c8babcbb
+  Version: webpack 3.8.1
+  Time: 1285ms
+                      Asset       Size  Chunks             Chunk Names
+  0.b7fb797bc63544562d3e.js    3.43 kB       0  [emitted]  main
+  0.b7fb797bc63544562d3e.css  595 bytes       0  [emitted]  main
+                  index.html  453 bytes          [emitted]
+  Entrypoint main = 0.b7fb797bc63544562d3e.js 0.b7fb797bc63544562d3e.css
+  chunk    {0} 0.b7fb797bc63544562d3e.js, 0.b7fb797bc63544562d3e.css (main) 301 bytes [entry] [rendered]
+      > main [0] ./src/index.js
+      [0] ./src/index.js 154 bytes {0} [depth 0] [built]
+          [no exports]
+      [1] ./src/styles/main.css 41 bytes {0} [depth 1] [built]
+          [no exports used]
+          harmony import ./styles/main.css [0] ./src/index.js 1:0-27
+      [2] ./src/scripts/main.js 106 bytes {0} [depth 1] [built]
+          [exports: default]
+          [only some exports used: default]
+          harmony import ./scripts/main.js [0] ./src/index.js 3:0-45
+  Child html-webpack-plugin for "index.html":
+      1 asset
+      Entrypoint undefined = index.html
+      chunk    {0} index.html 541 kB [entry] [rendered]
+          > [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html
+          [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html 710 bytes {0} [depth 0] [built]
+          [1] ./node_modules/.4.17.4@lodash/lodash.js 540 kB {0} [depth 1] [built]
+              cjs require ../node_modules/.4.17.4@lodash/lodash.js [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html 1:8-59
+          [2] (webpack)/buildin/global.js 488 bytes {0} [depth 2] [built]
+              cjs require global [1] ./node_modules/.4.17.4@lodash/lodash.js 1:0-48
+          [3] (webpack)/buildin/module.js 495 bytes {0} [depth 2] [built]
+              cjs require module [1] ./node_modules/.4.17.4@lodash/lodash.js 1:0-48
+  Child extract-text-webpack-plugin node_modules/.3.0.2@extract-text-webpack-plugin/dist node_modules/.0.28.7@css-loader/index.js!src/styles/main.css:
+      Entrypoint undefined = extract-text-webpack-plugin-output-filename
+      chunk    {0} extract-text-webpack-plugin-output-filename 3.08 kB [entry] [rendered]
+          > [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css
+          [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 821 bytes {0} [depth 0] [built]
+          [1] ./node_modules/.0.28.7@css-loader/lib/css-base.js 2.26 kB {0} [depth 1] [built]
+              cjs require ../../node_modules/.0.28.7@css-loader/lib/css-base.js [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 1:27-91
+  ```
+
+# stats 对象详细配置
+
+1. stats.all
+
+使用这个属性报错了.
+
+2. stats.assets
+
+这个属性控制着asset详细信息列表的输出,默认为true
 ```
-Hash: 7ee911d29342c8babcbb
-Version: webpack 3.8.1
-Time: 1285ms
                      Asset       Size  Chunks             Chunk Names
  0.b7fb797bc63544562d3e.js    3.43 kB       0  [emitted]  main
 0.b7fb797bc63544562d3e.css  595 bytes       0  [emitted]  main
                 index.html  453 bytes          [emitted]
-Entrypoint main = 0.b7fb797bc63544562d3e.js 0.b7fb797bc63544562d3e.css
-chunk    {0} 0.b7fb797bc63544562d3e.js, 0.b7fb797bc63544562d3e.css (main) 301 bytes [entry] [rendered]
-    > main [0] ./src/index.js
-    [0] ./src/index.js 154 bytes {0} [depth 0] [built]
-        [no exports]
-    [1] ./src/styles/main.css 41 bytes {0} [depth 1] [built]
-        [no exports used]
-        harmony import ./styles/main.css [0] ./src/index.js 1:0-27
-    [2] ./src/scripts/main.js 106 bytes {0} [depth 1] [built]
-        [exports: default]
-        [only some exports used: default]
-        harmony import ./scripts/main.js [0] ./src/index.js 3:0-45
-Child html-webpack-plugin for "index.html":
-     1 asset
-    Entrypoint undefined = index.html
-    chunk    {0} index.html 541 kB [entry] [rendered]
-        > [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html
-        [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html 710 bytes {0} [depth 0] [built]
-        [1] ./node_modules/.4.17.4@lodash/lodash.js 540 kB {0} [depth 1] [built]
-            cjs require ../node_modules/.4.17.4@lodash/lodash.js [0] ./node_modules/.2.30.1@html-webpack-plugin/lib/loader.js!./src/index.html 1:8-59
-        [2] (webpack)/buildin/global.js 488 bytes {0} [depth 2] [built]
-            cjs require global [1] ./node_modules/.4.17.4@lodash/lodash.js 1:0-48
-        [3] (webpack)/buildin/module.js 495 bytes {0} [depth 2] [built]
-            cjs require module [1] ./node_modules/.4.17.4@lodash/lodash.js 1:0-48
-Child extract-text-webpack-plugin node_modules/.3.0.2@extract-text-webpack-plugin/dist node_modules/.0.28.7@css-loader/index.js!src/styles/main.css:
-    Entrypoint undefined = extract-text-webpack-plugin-output-filename
-    chunk    {0} extract-text-webpack-plugin-output-filename 3.08 kB [entry] [rendered]
-        > [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css
-        [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 821 bytes {0} [depth 0] [built]
-        [1] ./node_modules/.0.28.7@css-loader/lib/css-base.js 2.26 kB {0} [depth 1] [built]
-            cjs require ../../node_modules/.0.28.7@css-loader/lib/css-base.js [0] ./node_modules/.0.28.7@css-loader!./src/styles/main.css 1:27-91
 ```
+3. stats.assetsSort
+
+这个属性只有在`stats.assets`属性为true的时候有效,只对assets列表信息进行排序,默认值为*field*,但是*!field*会比默认值快0.4s左右
+
+
