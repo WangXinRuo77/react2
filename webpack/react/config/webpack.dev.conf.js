@@ -5,14 +5,15 @@ const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 module.exports = {
 	entry:{
 		"core":path.resolve(__dirname,'../src/index.js'),
-		"vender":["react","react-dom","react-router"]
+		"vendor":["react","react-dom","react-router",'antd']
 	},
 	output:{
 		path:path.resolve(__dirname,'../dist'),
-		filename:"[id].[hash].js",
+		filename:"[name].[hash].js",
 	},
 	devtool:"cheap-module-eval-source-map",
 	module: {
@@ -73,11 +74,10 @@ module.exports = {
 
 		},	
 		stats: {
+			colors:true,
 			children:false,
 	    modules:true,
 	    performance:true,
-	    reasons:true,
-	    source:true,
 	    timings:true,
 	    usedExports:false,
 	    version:false,
@@ -116,6 +116,9 @@ module.exports = {
 		// 	name:"[name]",
 		// 	context:__dirname,
 		// })
+		new webpack.optimize.CommonsChunkPlugin({
+			names: ['vendor']
+		})
 	],
 	resolve:{
 		alias: {
