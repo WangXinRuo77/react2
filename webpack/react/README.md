@@ -69,6 +69,7 @@ reference link: [stackoverflow](https://stackoverflow.com/questions/43161151/rea
 
 * use cheap-module-eval-source-map instead of other devtools can improve 40% speed
 
+2. if using webpack-dev-server as http server ,so stats configure should be writen at *devServer*,should not be webpack config.
 ### reference
 
 1. vue-cli
