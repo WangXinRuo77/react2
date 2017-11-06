@@ -71,15 +71,20 @@ module.exports = {
 		port: 8089,
 		proxy: {
 
-		},
-		staticOptions: {
-
-		},
-    watchOptions: {
-      aggregateTimeout : 300,
-      poll             : 1000,
-    },		
+		},	
+		stats: {
+			children:false,
+	    modules:true,
+	    performance:true,
+	    reasons:true,
+	    source:true,
+	    timings:true,
+	    usedExports:false,
+	    version:false,
+	    warnings:true,			
+		}
 	},
+
 	plugins:[
 		// create css
 		new ExtractTextWebpackPlugin('css/whale.[chunkHash].css'),
@@ -105,11 +110,11 @@ module.exports = {
 		// minify css
 		new OptimizeCssAssetsPlugin(),
 		// create manifest
-		new webpack.DllPlugin({
-			path:"manifest.json",
-			name:"[name]",
-			context:__dirname,
-		})
+		// new webpack.DllPlugin({
+		// 	path:"manifest.json",
+		// 	name:"[name]",
+		// 	context:__dirname,
+		// })
 	],
 	resolve:{
 		alias: {
@@ -119,5 +124,5 @@ module.exports = {
 			"@utils": path.resolve(__dirname,'../src/utils')
 		},
 		extensions:[".js",".jsx",".less",".css"]
-	}
+	},
 }
