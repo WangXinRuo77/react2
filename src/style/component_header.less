@@ -1,0 +1,82 @@
+.component-header {
+	height: 106px;
+	background-color: #fff;
+	color: #666;
+	.header-abs {
+		display: flex;
+	  flex-wrap: wrap; 
+	  flex-direction:row-reverse;
+	  justify-content:space-between;
+	  height: 106px;
+	  .nav {
+	  	display: flex;
+	  }
+		.logo {
+			padding-left: 70px;
+			a {
+				height: 100%;
+				display: flex;
+  			align-items: center;
+			}
+		};
+		.link { 
+			position: relative;
+			padding-right: 10px;
+			.link-item {
+				height: 100%;
+				display: inline-block;
+				text-align: center;
+				padding:0 30px;
+			};
+			&:after {
+				position: absolute;
+				right: 0;
+				top: 40px;
+				display: block;
+				content:"";
+				width: 1px;
+				height:25px;
+				background: #666;
+
+			}
+		};
+		.nav-text-zh {
+			margin-top: 36px;
+			display: block;
+		}
+		.nav-text-en {
+			margin-top: 10px;
+			font-family: verdana;
+			display: block;
+			font-size: 12px;
+		}		
+		.sign {
+			display: flex;
+			height: 100%;
+			text-align: center;
+			.sign-link {
+				flex:auto;
+				width: 140px;
+				letter-spacing: 2px;
+			}
+			.sign-up {
+				color: #fff;
+				background-color: #1589fc;				
+			}
+		};
+		.user {
+			
+		}
+		.marker {
+			position: absolute;
+			left: 0;
+			bottom:0;
+			display: block;
+			width:40px;
+			height: 3px;
+			background: #1589fc;
+			transition: left .25s  ease;
+			-webkit-transition: left .25s ease;
+		}
+	}
+}
