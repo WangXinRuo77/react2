@@ -59,16 +59,8 @@ export default class ComponentHeader extends React.Component {
 										<span className="nav-text-en">CONTEST</span>
 									</Link>
 									<Link data-marker="procedure"  className="link-item" to="/procedure">
-										<span className="nav-text-zh">流程</span>
+										<span className="nav-text-zh">流 程</span>
 										<span className="nav-text-en">PROCEDURE</span>
-									</Link>
-									<Link data-marker="launch"  className="link-item" to="/launch">
-										<span className="nav-text-zh">发布</span>
-										<span className="nav-text-en">LAUNCH</span>
-									</Link>
-									<Link data-marker="about"  className="link-item" to="/about">
-										<span className="nav-text-zh">关于</span>
-										<span className="nav-text-en">ABOUT</span>
 									</Link>
 									<hr className="marker" style={{'left':this.state.markerMap[this.state.path]+'px'}}/>
 								</nav>			
