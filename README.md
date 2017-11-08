@@ -12,7 +12,7 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 
 
-# questions
+# 问题列表
 
 1. how to place some method and varible  which is used in whole application. just like some regexp ?
 
@@ -24,7 +24,7 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 5. 如何配置字体的文件路径
 
-# resolved
+# 解决方案
 
 ```
 
@@ -61,17 +61,17 @@ reference link: [stackoverflow](https://stackoverflow.com/questions/43161151/rea
 	}
 ```
 
-### references
+### 参考资料
 
-[react-router-dom](https://reacttraining.com/react-router/web/example/basic)
+> * [react-router-dom](https://reacttraining.com/react-router/web/example/basic)
 
-### experience 
+> * [vue-cli](https://github.com/vuejs/vue-cli)
+
+
+### 经验心得 
 
 1. how to increase the speed of webpack first building and rebuild?
 
 * use cheap-module-eval-source-map instead of other devtools can improve 40% speed
 
 2. if using webpack-dev-server as http server ,so stats configure should be writen at *devServer*,should not be webpack config.
-### reference
-
-1. vue-cli
