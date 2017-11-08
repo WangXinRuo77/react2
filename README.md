@@ -22,6 +22,8 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 4. how to make .css,.less,.sass,.styl etc, style file compiled by css-loader,less-loader,sass-loader,stylus-loader, and then make output in one css file?
 
+5. 如何配置字体的文件路径
+
 # resolved
 
 ```
