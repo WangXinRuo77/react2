@@ -41,24 +41,28 @@ module.exports = {
 				})
 			},			
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'file-loader',
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        loader: 'url-loader',
         options: {
           limit: 10000,
+          name:"[name].[hash:8].[ext]",
         }
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           limit: 10000,
         }
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'file-loader',
+        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+        loader: 'url-loader',
         options: {
-          limit: 10000,
+        	limit:10000,
+          name:"whale.icon.[hash:8].[ext]",
+          outputPath:'fonts/',
+          publicPath:'../'
         }
       }
 		]
@@ -75,7 +79,7 @@ module.exports = {
 		stats: {
 			colors:true,
 			children:false,
-	    modules:true,
+	    modules:false,
 	    performance:true,
 	    timings:true,
 	    usedExports:false,
@@ -83,7 +87,9 @@ module.exports = {
 	    warnings:true,			
 		}
 	},
-
+	watchOptions: {
+		ignored:/node_modules/
+	},
 	plugins:[
 		// create css
 		new ExtractTextWebpackPlugin('css/whale.[chunkHash].css'),
@@ -99,14 +105,14 @@ module.exports = {
 		// reload
 		new webpack.HotModuleReplacementPlugin(),
 		// minify js
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings:false,
-			},
-			mangle: {
-        except: ['$super', '$', 'exports', 'require']
-    	}			
-		}),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings:false,
+		// 	},
+		// 	mangle: {
+  //       except: ['$super', '$', 'exports', 'require']
+  //   	}			
+		// }),
 		// 压缩css
 		new OptimizeCssAssetsPlugin(), 
 		new webpack.optimize.CommonsChunkPlugin({
