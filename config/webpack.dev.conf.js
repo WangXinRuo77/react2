@@ -5,6 +5,7 @@ const WebpackBaseConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 	entry:{
@@ -105,19 +106,22 @@ module.exports = {
 		// reload
 		new webpack.HotModuleReplacementPlugin(),
 		// minify js
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: {
-		// 		warnings:false,
-		// 	},
-		// 	mangle: {
-  //       except: ['$super', '$', 'exports', 'require']
-  //   	}			
-		// }),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings:false,
+			},
+			mangle: {
+        except: ['$super', '$', 'exports', 'require']
+    	}			
+		}),
 		// 压缩css
 		new OptimizeCssAssetsPlugin(), 
+		// 将entry中的vendor单独分离出来
 		new webpack.optimize.CommonsChunkPlugin({
 			names: ['vendor']
-		})
+		}),
+		// 分析工具
+		// new BundleAnalyzerPlugin()
 	],
 	resolve:{
 		alias: {
