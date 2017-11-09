@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --history-api-fallback  --config ./config/webpack.dev.conf.js",
     "build": "webpack -p --json > stats.json --config ./config/webpack.dev.conf.js",
-    "analyze": "webpack-dev-server --history-api-fallback --config ./config/webpack.dev.conf.js"
+    "analyze": "webpack-dev-server --history-api-fallback --config ./config/webpack.dev.conf.js",
+    "test": "webpack-dev-server --config ./test/webpack.conf.js"
   },
   "keywords": [
     "webpack",
