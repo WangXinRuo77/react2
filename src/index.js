@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 /*
 import {
   BrowserRouter as Router,
@@ -77,6 +76,8 @@ ReactDOM.render(
 	document.querySelector('#app')
 )
 */
+import React from 'react';
+import ReactDOM from 'react-dom';
 ReactDOM.render(
 	<div>
 		<h1>hello react</h1>
