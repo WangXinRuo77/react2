@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+/*
 import {
   BrowserRouter as Router,
   Route,
   Redirect
 } from 'react-router-dom'
-
+*/
 
 // ui theme 
-import '../ui/default.less';
+// import '../ui/default.less';
 
 // import 'antd/dist/antd.less';
 
 
 // iconfont
+/*
 import '../static/fonts/iconfont.less'
 
 import ComponentHeader from './components/header/header.jsx';
@@ -73,4 +75,11 @@ ReactDOM.render(
 		</div>
 	</Router>,
 	document.querySelector('#app')
+)
+*/
+ReactDOM.render(
+	<div>
+		<h1>hello react</h1>
+	</div>,
+	document.getElementById('app')
 )
