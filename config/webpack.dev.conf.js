@@ -6,17 +6,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+		// "vendor":["react","react-dom","react-router",'antd']
+		// react 1.08M,react-dom3.01M react-router 1.43M antd 11.6M!
+		
+	// devtool:"cheap-module-eval-source-map",
 module.exports = {
 	entry:{
 		"core":path.resolve(__dirname,'../src/index.js'),
-		"vendor":["react","react-dom","react-router",'antd']
+		// "vendor": ['react','react-dom','react-router']
 	},
 	output:{
 		path:path.resolve(__dirname,'../dist'),
 		filename:"[name].[hash].js",
 	},
-	devtool:"cheap-module-eval-source-map",
 	module: {
 		loaders: [
 			{
@@ -106,20 +108,20 @@ module.exports = {
 		// reload
 		new webpack.HotModuleReplacementPlugin(),
 		// minify js
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings:false,
-			},
-			mangle: {
-        except: ['$super', '$', 'exports', 'require']
-    	}			
-		}),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings:false,
+		// 	},
+		// 	mangle: {
+    //     except: ['$super', '$', 'exports', 'require']
+    // 	}			
+		// }),
 		// 压缩css
 		new OptimizeCssAssetsPlugin(), 
 		// 将entry中的vendor单独分离出来
-		new webpack.optimize.CommonsChunkPlugin({
-			names: ['vendor']
-		}),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	names: ['vendor']
+		// }),
 		// 分析工具
 		// new BundleAnalyzerPlugin()
 	],
