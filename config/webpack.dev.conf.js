@@ -28,17 +28,11 @@ module.exports = {
 			}, 
 			{
 				test:/\.less/,
-				use:ExtractTextWebpackPlugin.extract({
-					fallback:"style-loader",
-					use:["css-loader","less-loader"]
-				})
+				loaders:"style-loader!css-loader!less-loader"
 			},
 			{
 				test:/\.css/,
-				use:ExtractTextWebpackPlugin.extract({
-					fallback:"style-loader",
-					use:["css-loader"]
-				})
+				loaders:"style-loader!css-loader"
 			},			
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
@@ -46,6 +40,8 @@ module.exports = {
         options: {
           limit: 10000,
           name:"[name].[hash:8].[ext]",
+          outputPath:"images/",
+          publicPath:"../"
         }
       },
       {
@@ -53,7 +49,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale.icon.[hash:8].[ext]",
+          name:"whale-icon.[hash:8].[ext]",
           outputPath:'fonts/',
           publicPath:'../'          
         }
@@ -97,7 +93,6 @@ module.exports = {
 	},
 	plugins:[
     new webpack.NoEmitOnErrorsPlugin(),
-		new ExtractTextWebpackPlugin('css/whale.[chunkHash].css'),
 		new HtmlWebpackPlugin({
 			template:path.resolve(__dirname,'../src/index.html'),
 			inject:true,
@@ -110,8 +105,10 @@ module.exports = {
 			"@style": path.resolve(__dirname,'../src/style'),
 			"@pages": path.resolve(__dirname,'../src/pages'),
 			"@components": path.resolve(__dirname,'../src/components'),
-			"@utils": path.resolve(__dirname,'../src/utils')
+			"@utils": path.resolve(__dirname,'../src/utils'),
+			"@image": path.resolve(__dirname,'../static/images')
 		},
-		extensions:[".js",".jsx",".less",".css"]
+		extensions:[".js",".jsx",".less",".css"],
+		modules:['node_modules']
 	},
 }

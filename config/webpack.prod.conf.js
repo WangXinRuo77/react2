@@ -10,11 +10,11 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
 	entry:{
 		"core":path.resolve(__dirname,'../src/index.js'),
-		"vendor": ['react','react-dom','react-router']
+		"vendor": ['react','react-dom','react-router','antd']
 	},
 	output:{
 		path:path.resolve(__dirname,'../dist'),
-		filename:"[name].[hash:8].js",
+		filename:"js/[name].[hash:8].js",
 	},
 	module: {
 		loaders: [
@@ -45,7 +45,10 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"[name].[hash:8].[ext]",
+          name:"whale-.[name].[hash:8].[ext]",
+          outputPath:"images",
+          publicPath:"../"
+
         }
       },
       {
@@ -53,8 +56,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale-image.[hash:8].[ext]",
-          outputPath:"images",
+          name:"whale-video.[hash:8].[ext]",
+          outputPath:"videos",
           publicPath:"../"
         }
       },
@@ -106,7 +109,8 @@ module.exports = {
 			"@style": path.resolve(__dirname,'../src/style'),
 			"@pages": path.resolve(__dirname,'../src/pages'),
 			"@components": path.resolve(__dirname,'../src/components'),
-			"@utils": path.resolve(__dirname,'../src/utils')
+			"@utils": path.resolve(__dirname,'../src/utils'),
+			"@image": path.resolve(__dirname,'../static/images')
 		},
 		extensions:[".js",".jsx",".less",".css"]
 	},	
