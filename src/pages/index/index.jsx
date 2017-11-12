@@ -1,7 +1,11 @@
 import React from 'react';
 
 import '@style/page_index_index.less'; 
-
+import IMGBanner from '@image/index-banner.jpg';
+console.log(IMGBanner)
+const BannerStyle = {
+	backgroundImage:IMGBanner
+}
 export default class Index extends React.Component {
 	constructor(){
 		super()
@@ -15,7 +19,7 @@ export default class Index extends React.Component {
 			<main>
 				<div className="page-index" style={{"minHeight": "2000px"}}>
 					{/* banner */}
-					<div className="module-banner">
+					<div className="module-banner" style={BannerStyle}>
 						<div className="banner-panel">
 							<h3 className="global-modlue-zh">有钱有趣有原则的设计竞赛</h3>
 							<h3 className="global-modlue-en">Whale Design, Desi1gn Will.</h3>
