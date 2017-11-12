@@ -66,14 +66,14 @@ export default class ComponentHeader extends React.Component {
 								</nav>			
 								{/* unLogin */}
 								<div className="sign">
-									<a className='sign-link' href="" >
+									<Link className='sign-link' to="/login" >
 										<span className="nav-text-zh">登录</span>
 										<span className="nav-text-en">SIGN IN</span>
-									</a>
-									<a className='sign-link sign-up' href="" >
+									</Link>
+									<Link className='sign-link sign-up' to="/register" >
 										<span className="nav-text-zh">注册</span>
 										<span className="nav-text-en">SIGN UP</span>
-									</a>
+									</Link>
 								</div>						
 								{/* user */}
 								<div className="user hide">
