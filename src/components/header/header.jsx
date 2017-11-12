@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import '@style/component_header.less';
 
+import IMGLogo from '@image/logo.jpg'
  
 export default class ComponentHeader extends React.Component {
 	constructor(){
@@ -83,7 +84,7 @@ export default class ComponentHeader extends React.Component {
 							{/* logo */}									
 							<div className="logo">
 								<a href="/" >
-									<img src="./static/images/logo.jpg" />
+									<img src={IMGLogo} />
 								</a>	
 							</div>	
 						</div>					
