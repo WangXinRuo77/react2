@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import '@style/component_header.less';
 
 import IMGLogo from '@image/logo.jpg'
- 
+console.log(IMGLogo)
 export default class ComponentHeader extends React.Component {
 	constructor(){
 		super();
