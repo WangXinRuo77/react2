@@ -39,9 +39,9 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"[name].[hash:8].[ext]",
+          name:"whale-[name].[hash:8].[ext]",
           outputPath:"images/",
-          publicPath:"../"
+          publicPath:"/static/"
         }
       },
       {
@@ -49,7 +49,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale-icon.[hash:8].[ext]",
+          name:"whale-.[hash:8].[ext]",
           outputPath:'fonts/',
           publicPath:'../'          
         }
