@@ -1,9 +1,9 @@
-# introduce 
+# 简介 
 
 a project build by `react` ,`react-router`,`redux` and `antd`.
 
 
-# usage
+# 用法
 
 ```
 	npm install webpack-dev-server -g
@@ -24,42 +24,11 @@ a project build by `react` ,`react-router`,`redux` and `antd`.
 
 5. 如何配置字体的文件路径
 
+6. 开发环境中如何做到更改css不刷新页面？
+
+
 # 解决方案
 
-```
-
-Module build failed: Unknown word (5:1)
-  3 // load the styles
-  4 | var content = require("!!./normalize.css");
-> 5 | if(typeof content === 'string') content = [[module.id, content, '']];
-    | ^
-  6 | // Prepare cssTransformation
-  7 | var transform;
-  8 |
-
-```
-
-use `style-loader!css-loader` instead of `css-loader!style-loader`
-
-
-```
-Module build failed: ReferenceError: [BABEL] D:\automake\webpack\react\node_modules\attr-accept\dist\index.js: Using removed Babel 5 option: D:\automake\webpack\react\node_modules\attr-accept\.babelrc.stage - Check out the corresponding stage-x presets
-```
-
-add a `exclude` in webpack.dev.conf.js.
-
-reference link: [stackoverflow](https://stackoverflow.com/questions/43161151/react-photoswipe-using-removed-babel-5-option)
-
-```
-	{
-		test:/\.jsx?$/,
-		loader:"babel-loader",
-		exclude:/node_modules/,
-		query:{
-			presets:['react','es2015']
-		}
-	}
-```
 
 ### 参考资料
 
@@ -75,3 +44,15 @@ reference link: [stackoverflow](https://stackoverflow.com/questions/43161151/rea
 * use cheap-module-eval-source-map instead of other devtools can improve 40% speed
 
 2. if using webpack-dev-server as http server ,so stats configure should be writen at *devServer*,should not be webpack config.
+
+3. css文件loader解析顺序优先级：style-loader > css-loader > less-loader/sass-loader/stylus-loader
+
+
+### 性能列表
+
+* 2017/11/12
+	* build(11s-12s) rebuild(1.5s)
+
+### 优化
+
+1. 去除不需要编译的模块
