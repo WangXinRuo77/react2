@@ -8,7 +8,9 @@ export default class Index extends React.Component {
 			name:'hello index'
 		}
 	}
-
+	componentWillMount(){
+		// console.log()
+	}
 	render(){
 		return (
 			<main>
