@@ -14,7 +14,7 @@ module.exports = {
 	devtool:"cheap-module-source-map",
 	output:{
 		path:path.resolve(__dirname,'../dist'),
-		filename:"[name].[hash].js",
+		filename:"js/[name].[hash].js",
 	},
 	module: {
 		loaders: [
@@ -39,20 +39,14 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale-[name].[hash:8].[ext]",
+          name:"[name].[hash:8].[ext]",
           outputPath:"images/",
-          publicPath:"/static/"
+          publicPath:"/"
         }
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name:"whale-.[hash:8].[ext]",
-          outputPath:'fonts/',
-          publicPath:'../'          
-        }
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
@@ -61,7 +55,7 @@ module.exports = {
         	limit:10000,
           name:"whale.icon.[hash:8].[ext]",
           outputPath:'fonts/',
-          publicPath:'../'
+          publicPath:'/'
         }
       }
 		]
