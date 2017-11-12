@@ -1,11 +1,6 @@
 import React from 'react';
 
 import '@style/page_index_index.less'; 
-import IMGBanner from '@image/index-banner.jpg';
-console.log(IMGBanner)
-const BannerStyle = {
-	backgroundImage:IMGBanner
-}
 export default class Index extends React.Component {
 	constructor(){
 		super()
@@ -19,7 +14,7 @@ export default class Index extends React.Component {
 			<main>
 				<div className="page-index" style={{"minHeight": "2000px"}}>
 					{/* banner */}
-					<div className="module-banner" style={BannerStyle}>
+					<div className="module-banner" >
 						<div className="banner-panel">
 							<h3 className="global-modlue-zh">有钱有趣有原则的设计竞赛</h3>
 							<h3 className="global-modlue-en">Whale Design, Desi1gn Will.</h3>
@@ -71,7 +66,7 @@ export default class Index extends React.Component {
 						<ul className="contest-list clearfix">
 							<li className="contest-item">
 								<div className="conainer">
-									<img className="contest-thumb" src="" width="225" height="150" />
+									<img className="contest-thumb" src={ require('@image/free_network_banner.png')} width="225" height="150" />
 									<h4 className="mt20">真个基金</h4>
 									<div className="contest-label fs12 mt10  mb20 clearfix">
 										<span className="left category">LOGO设计</span>
@@ -96,7 +91,7 @@ export default class Index extends React.Component {
 							</li>
 							<li className="contest-item">
 								<div className="conainer">
-									<img className="contest-thumb" src="" width="225" height="150" />
+									<img className="contest-thumb" src={ require('@image/free_network_banner.png')} width="225" height="150" />
 									<h4 className="mt20">真个基金</h4>
 									<div className="contest-label fs12 mt10  mb20 clearfix">
 										<span className="left category">LOGO设计</span>
@@ -121,7 +116,7 @@ export default class Index extends React.Component {
 							</li>
 							<li className="contest-item">
 								<div className="conainer">
-									<img className="contest-thumb" src="" width="225" height="150" />
+									<img className="contest-thumb" src={ require('@image/free_network_banner.png')} width="225" height="150" />
 									<h4 className="mt20">真个基金</h4>
 									<div className="contest-label fs12 mt10  mb20 clearfix">
 										<span className="left category">LOGO设计</span>
@@ -146,7 +141,7 @@ export default class Index extends React.Component {
 							</li>
 							<li className="contest-item">
 								<div className="conainer">
-									<img className="contest-thumb" src="" width="225" height="150" />
+									<img className="contest-thumb" src={ require('@image/free_network_banner.png')} width="225" height="150" />
 									<h4 className="mt20">真个基金</h4>
 									<div className="contest-label fs12 mt10  mb20 clearfix">
 										<span className="left category">LOGO设计</span>
@@ -219,7 +214,7 @@ export default class Index extends React.Component {
 							<li className="item">
 								<a href="">
 									<div className="container">
-										<img src="" width="225" height="150" className="thumb" />
+										<img src={ require('@image/free_network_banner.png')} width="225" height="150" className="thumb" />
 										<p className="title">眼·鲸</p>
 										<p className="contest">画条鲸鱼，给精于设计做Logo</p>
 										<div className="data">
@@ -239,7 +234,7 @@ export default class Index extends React.Component {
 							<li className="item">
 								<a href="">
 									<div className="container">
-										<img src="" width="225" height="150" className="thumb" />
+										<img src={ require('@image/free_network_banner.png')} width="225" height="150" className="thumb" />
 										<p className="title">眼·鲸</p>
 										<p className="contest">画条鲸鱼，给精于设计做Logo</p>
 										<div className="data">
@@ -259,7 +254,7 @@ export default class Index extends React.Component {
 							<li className="item">
 								<a href="">
 									<div className="container">
-										<img src="" width="225" height="150" className="thumb" />
+										<img src={ require('@image/free_network_banner.png')} width="225" height="150" className="thumb" />
 										<p className="title">眼·鲸</p>
 										<p className="contest">画条鲸鱼，给精于设计做Logo</p>
 										<div className="data">
@@ -279,7 +274,7 @@ export default class Index extends React.Component {
 							<li className="item">
 								<a href="">
 									<div className="container">
-										<img src="" width="225" height="150" className="thumb" />
+										<img src={ require('@image/free_network_banner.png')} width="225" height="150" className="thumb" />
 										<p className="title">眼·鲸</p>
 										<p className="contest">画条鲸鱼，给精于设计做Logo</p>
 										<div className="data">
@@ -307,7 +302,7 @@ export default class Index extends React.Component {
 						<div className="container">
 							<ul className="designers clearfix">
 								<li className="designer">
-									<img src="" width="180" height="120" className="avatar" />
+									<img src={ require('@image/free_network_banner.png')} width="180" height="120" className="avatar" />
 									<div className="intro">
 										<p className="name">都人华</p>
 										<p className="job">腾讯高级交互设计师</p>
@@ -315,7 +310,7 @@ export default class Index extends React.Component {
 									</div>
 								</li>
 								<li className="designer">
-									<img src="" width="180" height="120" className="avatar" />
+									<img src={ require('@image/free_network_banner.png')} width="180" height="120" className="avatar" />
 									<div className="intro">
 										<p className="name">都人华</p>
 										<p className="job">腾讯高级交互设计师</p>
@@ -323,7 +318,7 @@ export default class Index extends React.Component {
 									</div>
 								</li>
 								<li className="designer">
-									<img src="" width="180" height="120" className="avatar" />
+									<img src={ require('@image/free_network_banner.png')} width="180" height="120" className="avatar" />
 									<div className="intro">
 										<p className="name">都人华</p>
 										<p className="job">腾讯高级交互设计师</p>
@@ -331,7 +326,7 @@ export default class Index extends React.Component {
 									</div>
 								</li>
 								<li className="designer">
-									<img src="" width="180" height="120" className="avatar" />
+									<img src={ require('@image/free_network_banner.png')} width="180" height="120" className="avatar" />
 									<div className="intro">
 										<p className="name">都人华</p>
 										<p className="job">腾讯高级交互设计师</p>
@@ -339,7 +334,7 @@ export default class Index extends React.Component {
 									</div>
 								</li>
 								<li className="designer">
-									<img src="" width="180" height="120" className="avatar" />
+									<img src={ require('@image/free_network_banner.png')} width="180" height="120" className="avatar" />
 									<div className="intro">
 										<p className="name">都人华</p>
 										<p className="job">腾讯高级交互设计师</p>
@@ -358,22 +353,22 @@ export default class Index extends React.Component {
 							<ul className="customers clearfix">
 								<li className="customer">
 									<a href="">
-										<img src="" width="250" height="150" />
+										<img src={ require('@image/free_network_banner.png')} width="250" height="150" />
 									</a>
 								</li>
 								<li className="customer">
 									<a href="">
-										<img src="" width="250" height="150" />
+										<img src={ require('@image/free_network_banner.png')} width="250" height="150" />
 									</a>
 								</li>
 								<li className="customer">
 									<a href="">
-										<img src="" width="250" height="150" />
+										<img src={ require('@image/free_network_banner.png')} width="250" height="150" />
 									</a>
 								</li>
 								<li className="customer">
 									<a href="">
-										<img src="" width="250" height="150" />
+										<img src={ require('@image/free_network_banner.png')} width="250" height="150" />
 									</a>
 								</li>
 							</ul>	
