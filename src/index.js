@@ -1,4 +1,7 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './reducers/index'
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
@@ -6,6 +9,8 @@ import {
   Redirect
 } from 'react-router-dom'
 
+let store = createStore(reducer)
+console.log(store.getState())
 import 'antd/dist/antd.min.css';
 // ui theme 
 import '../ui/default.less';
@@ -24,17 +29,22 @@ import PageProcedureDesigner from '@pages/procedure/designer.jsx';
 import PageLaunch from './pages/launch/index.jsx';
 import PageAbout from './pages/about/index.jsx';  
 
+import PageRegister from './pages/register/index';
+
 ReactDOM.render(
-	<Router>
-		<div>
-			<ComponentHeader />
-			<Route exact path="/" component={ PageIndex } />
-			<Route path="/contest" component={ PageContest } />
-			<Route path="/procedure" component = { PageProcedure} />	
-			<Route path="/launch" component={ PageLaunch } />
-			<Route path="/about" component={ PageAbout } /> 			
-			<ComponentFooter />
-		</div>
-	</Router>,
+	<Provider store= { store }>
+		<Router>
+			<div>
+				<ComponentHeader />
+				<Route exact path="/" component={ PageIndex } />
+				<Route path="/contest" component={ PageContest } />
+				<Route path="/procedure" component = { PageProcedure} />	
+				<Route path="/launch" component={ PageLaunch } />
+				<Route path="/about" component={ PageAbout } />
+				<Route path="/register" component={ PageRegister } />  			
+				<ComponentFooter />
+			</div>
+		</Router>
+	</Provider>,
 	document.querySelector('#app')
 )
