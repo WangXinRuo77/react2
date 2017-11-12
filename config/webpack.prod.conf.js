@@ -45,9 +45,9 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale-.[name].[hash:8].[ext]",
-          outputPath:"images",
-          publicPath:"../"
+          name:"whale-[name].[hash:8].[ext]",
+          outputPath:"images/",
+          publicPath:"/"
 
         }
       },
@@ -56,9 +56,9 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name:"whale-video.[hash:8].[ext]",
-          outputPath:"videos",
-          publicPath:"../"
+          name:"whale-[hash:8].[ext]",
+          outputPath:"videos/",
+          publicPath:"/"
         }
       },
       {
@@ -68,7 +68,7 @@ module.exports = {
         	limit:10000,
           name:"whale-icon.[hash:8].[ext]",
           outputPath:'fonts/',
-          publicPath:'../'
+          publicPath:'/'
         }
       }
 		]
