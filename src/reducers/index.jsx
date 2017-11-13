@@ -1,21 +1,30 @@
-import { ADD } from '../actions';
+import { SaveUserInfo } from '../actions/userinfo'
 import { combineReducers } from 'redux';
-import defaultStore from '../store';
-const App = (state = defaultStore,action) =>{
+
+import userStore from '../store/userinfo';
+
+const user = (state = userStore,action) =>{
 	switch (action.type) {
-		case 'register': 
-			console.log(action)
-			return Object.assign({},state,{
-				count:2
-			})
+		case 'SaveUserInfo': 
+			return state;
 			break;
 		default:
 			return state;
 			break;
 	}
 }
-
+const App = (state = {},action) => {
+		switch (action.type) {
+		case 'SAVE_USER_INFO': 
+			return state;
+			break;
+		default:
+			return state;
+			break;
+	}
+}
 const Reducer = combineReducers({
+	user,
 	App
 })
 
