@@ -1,11 +1,11 @@
 import React from 'react';
-import { Row, Col, Input, Button, message } from 'antd';
-import regexp from '@utils/regexp';
-import { trim, isEmpty } from '@utils/common'
-import { ADD } from '../../actions/index'
-
+import { connect } from 'react-redux';
 import '@style/page_register.less';
+import regexp from '@utils/regexp';
+import actions  from '../../actions/userinfo.js'
+import { trim, isEmpty } from '@utils/common'
 
+import { Row, Col, Input, Button, message } from 'antd';
 
 class PageRegister extends React.Component {
 	constructor () {
@@ -44,11 +44,12 @@ class PageRegister extends React.Component {
 			message.error('密码与确认密码不一致');
 			return;
 		}
-		console.log(this.props.store);
-		return;
-		this.props.dispatch('register',{
+		this.props.save({
+			name:"王磊",
 			account,
-			password
+			email:"test@react.com",
+			mobile:15929485138,
+			password:123456			
 		})
 	}
 	editAccount(ev){
@@ -87,4 +88,19 @@ class PageRegister extends React.Component {
 		)
 	}
 }
-export default PageRegister
+const getUserInfo = state => {
+	return {
+		userinfo:state.user
+	}
+};
+const DispatchActions = (dispatch,props) => {
+	console.log(dispatch)
+	console.log('----------------')
+	console.log(props);
+	console.log('----------------')
+	console.log(actions)
+	return {
+		save:(...userinfo) => dispatch(actions.SaveUserInfo(...userinfo))
+	}
+}
+export default connect(getUserInfo,DispatchActions)(PageRegister)
