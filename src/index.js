@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom'
 
 let store = createStore(reducer)
-console.log(store.getState())
+// console.log(store.getState())
 import 'antd/dist/antd.min.css';
 // ui theme 
 import '../ui/default.less';
