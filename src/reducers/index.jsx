@@ -6,7 +6,7 @@ import userStore from '../store/userinfo';
 const user = (state = userStore,action) =>{
 	switch (action.type) {
 		case 'SaveUserInfo': 
-			return state;
+			return action.state;
 			break;
 		default:
 			return state;
