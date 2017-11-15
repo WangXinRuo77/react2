@@ -11,9 +11,9 @@ class PageRegister extends React.Component {
 	constructor () {
 		super()
 		this.state = {
-			account:"15929485138",
-			password:"123456",
-			repeatPassword:"123456"
+			account:"",
+			password:"",
+			repeatPassword:""
 		}
 	}
 	Register(ev){
@@ -44,12 +44,12 @@ class PageRegister extends React.Component {
 			message.error('密码与确认密码不一致');
 			return;
 		}
-		this.props.save({
-			name:"王磊",
-			account,
-			email:"test@react.com",
-			mobile:15929485138,
-			password:123456			
+		this.props.dispatch({
+			type:"SaveUserInfo",
+			state:{ 
+				account, 
+				id:1
+			}
 		})
 	}
 	editAccount(ev){
@@ -92,15 +92,5 @@ const getUserInfo = state => {
 	return {
 		userinfo:state.user
 	}
-};
-const DispatchActions = (dispatch,props) => {
-	console.log(dispatch)
-	console.log('----------------')
-	console.log(props);
-	console.log('----------------')
-	console.log(actions)
-	return {
-		save:(...userinfo) => dispatch(actions.SaveUserInfo(...userinfo))
-	}
-}
-export default connect(getUserInfo,DispatchActions)(PageRegister)
+}; 
+export default connect(getUserInfo)(PageRegister)
