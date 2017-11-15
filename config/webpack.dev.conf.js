@@ -100,7 +100,8 @@ module.exports = {
 			"@pages": path.resolve(__dirname,'../src/pages'),
 			"@components": path.resolve(__dirname,'../src/components'),
 			"@utils": path.resolve(__dirname,'../src/utils'),
-			"@image": path.resolve(__dirname,'../static/images')
+			"@image": path.resolve(__dirname,'../static/images'),
+			"@actions": path.resolve(__dirname,'../src/actions')
 		},
 		extensions:[".js",".jsx",".less",".css"],
 		modules:['node_modules']
