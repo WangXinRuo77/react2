@@ -1,12 +1,12 @@
 import React from 'react';
 import { Row , Col } from 'antd';
 import { Link } from 'react-router-dom';
-
+import { connect } from 'react-redux';
 
 import '@style/component_header.less';
 
 import IMGLogo from '../../../static/images/logo.jpg'
-export default class ComponentHeader extends React.Component {
+class ComponentHeader extends React.Component {
 	constructor(){
 		super();
 		this.state = {
@@ -41,6 +41,7 @@ export default class ComponentHeader extends React.Component {
 		})
 	}
 	render(){
+		var HasUser = this.props.user.id ? true :false;
 		return(
 			<header className="component-header">
 				<Row>
@@ -65,7 +66,7 @@ export default class ComponentHeader extends React.Component {
 									<hr className="marker" style={{'left':this.state.markerMap[this.state.path]+'px'}}/>
 								</nav>			
 								{/* unLogin */}
-								<div className="sign">
+								<div className="sign" style={{ "display" : HasUser?"none":"flex" }}>
 									<Link className='sign-link' to="/login" >
 										<span className="nav-text-zh">登录</span>
 										<span className="nav-text-en">SIGN IN</span>
@@ -76,7 +77,7 @@ export default class ComponentHeader extends React.Component {
 									</Link>
 								</div>						
 								{/* user */}
-								<div className="user hide">
+								<div className="user" style={{ "display" : HasUser?"flex":"none" }}>
 									<div className="avatar">you have login</div>
 								</div>																
 							</div>
@@ -122,3 +123,9 @@ export default class ComponentHeader extends React.Component {
 		)
 	}
 }
+const getUserInfo = state =>{
+	return {
+		user:state.user
+	}
+}
+export default connect(getUserInfo)(ComponentHeader)
