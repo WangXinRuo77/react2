@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link, browserHistory} from 'react-router';
 import '@style/page_register.less';
 import regexp from '@utils/regexp';
 import actions  from '../../actions/userinfo.js'
@@ -20,6 +21,8 @@ class PageRegister extends React.Component {
 		let account = trim(this.state.account);
 		let password = trim(this.state.password);
 		let repeatPassword = trim(this.state.repeatPassword);
+		// this.props.history.go('/')
+		console.log(this.props)
 		if(isEmpty(account)) {
 			message.error('请输入手机号');
 			return;
@@ -44,11 +47,15 @@ class PageRegister extends React.Component {
 			message.error('密码与确认密码不一致');
 			return;
 		}
+		// 通过注册，获取用户信息，派发全局
 		this.props.dispatch({
 			type:"SaveUserInfo",
 			state:{ 
-				account, 
-				id:1
+				id:new Date().getTime(),
+				name:'test',
+				avatar:'test',
+				email:'test',
+				mobile:account
 			}
 		})
 	}
