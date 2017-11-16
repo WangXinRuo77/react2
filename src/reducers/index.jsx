@@ -1,23 +1,22 @@
 import { SaveUserInfo } from '../actions/userinfo'
 import { combineReducers } from 'redux';
-
+import Storage from '@utils/storage'
 import userStore from '../store/userinfo';
 
 const user = (state = userStore,action) =>{
 	switch (action.type) {
-		case 'SaveUserInfo': 
+		case 'SaveUserInfo':  
+			Storage.set({
+				user:action.state
+			})
 			return action.state;
 			break;
-		default:
-			return state;
-			break;
-	}
-}
-const App = (state = {},action) => {
-		switch (action.type) {
-		case 'SAVE_USER_INFO': 
-			return state;
-			break;
+		case 'ClearUserInfo':  
+			Storage.set({
+				user:userStore
+			})
+			return userStore
+			break;			
 		default:
 			return state;
 			break;
@@ -25,7 +24,6 @@ const App = (state = {},action) => {
 }
 const Reducer = combineReducers({
 	user,
-	App
 })
 
 export default Reducer;
