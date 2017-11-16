@@ -3,6 +3,9 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers/index'
 import ReactDOM from 'react-dom';
+import Storage from "@utils/storage";
+	import SaveUserInfo from '@actions/userinfo';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +13,17 @@ import {
 } from 'react-router-dom'
 
 let store = createStore(reducer)
-
+// 获取存储在Localstorage中的uid
+let Account = Storage.get('user');
+//存在证明用户已经登陆，存储在stora中，派发全局
+if(Account && Account.id) {
+	store.dispatch({
+		type:"SaveUserInfo",
+		state:Storage.get('user')
+	})
+}
 store.subscribe(function (){
-	console.log(store.getState())
+	// console.log(store.getState())
 })
 // console.log(store.getState())
 import 'antd/dist/antd.min.css';
