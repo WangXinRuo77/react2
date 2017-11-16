@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 
 import '@style/component_header.less';
 
-import IMGLogo from '../../../static/images/logo.jpg'
+import IMGLogo from '../../../static/images/logo.jpg';
+import IMGDefaultAvatar from '@image/default_avatar.jpg'
 class ComponentHeader extends React.Component {
 	constructor(){
 		super();
@@ -22,6 +23,11 @@ class ComponentHeader extends React.Component {
 	}
 	componentWillMount(){
 
+	}
+	Logout(){ 
+		this.props.dispatch({
+			type:"ClearUserInfo"
+		})
 	} 
 	updateMarkerLeft(ev){
 		let currentPathNode = ev.target; 
@@ -77,8 +83,12 @@ class ComponentHeader extends React.Component {
 									</Link>
 								</div>						
 								{/* user */}
-								<div className="user" style={{ "display" : HasUser?"flex":"none" }}>
-									<div className="avatar">you have login</div>
+								<div className="user" style={{ "display" : HasUser?"block":"none" }}>
+									<div className="avatar" style={{"backgroundImage":"url("+IMGDefaultAvatar+")"}}></div>
+									<ul className="links">
+										<li>个人中心</li>
+										<li onClick={ this.Logout.bind(this)}>退出</li>
+									</ul>
 								</div>																
 							</div>
 							{/* logo */}									
@@ -88,35 +98,6 @@ class ComponentHeader extends React.Component {
 								</a>	
 							</div>	
 						</div>					
-					</Col>
-				</Row>
-				<Row className="hide">
-					<Col>
-						<div className="header-fix hide">
-							{/*logo*/}
-							<div className="logo" >
-									<a href="" >
-										i am a logo
-									</a>
-							</div>
-							{/* nav */}
-							<nav className="nav">
-								<a href="">首页</a>
-								<a href="">首页</a>
-								<a href="">首页</a>
-								<a href="">首页</a>
-								<a href="">首页</a>
-							</nav>
-							{/* unLogin */}
-							<div className="sign">
-								<a className='sign-link' href="" >登录</a>
-								<a className='sign-link' href="" >注册</a>
-							</div>
-							{/* user */}
-							<div className="user">
-								<div className="avatar">you have login</div>
-							</div>				
-						</div>							
 					</Col>
 				</Row>
 			</header>
