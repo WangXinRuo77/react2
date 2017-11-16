@@ -1,4 +1,7 @@
 export default  {
-	account:"",
-	id:null
+	id:null,
+	name:null,
+	avatar:null,
+	email:null,
+	mobile:null
 }
